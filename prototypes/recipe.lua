@@ -294,7 +294,7 @@ data:extend(
 	{
 		{ type = "fluid", name = "pollution", amount = 1, fluidbox_index = 1 },
 	},
-    icon = "__base__/graphics/icons/fluid/pollution.png",
+    icon = "__bery0zas-pure-it__/graphics/icons/fluid/steam.png",
     icon_size = 32,
     subgroup = "terrain",
     results =
@@ -426,7 +426,7 @@ data:extend(
 		{ type = "item", name= "coal", amount = 10 },
 		{ type = "fluid", name = "polluted-air", amount = 2, fluidbox_index = 2 },
 	},
-    icon = "__base__/graphics/icons/coal.png",
+    icon = "__bery0zas-pure-it__/graphics/icons/coal.png",
     icon_size = 32,
     subgroup = "terrain",
     results =
@@ -445,7 +445,7 @@ data:extend(
 		{ type = "fluid", name = "steam", amount = 5, fluidbox_index = 1 },
 		{ type = "fluid", name = "polluted-air", amount = 2, fluidbox_index = 2 },		
 	},
-    icon = "__base__/graphics/icons/fluid/steam.png",
+    icon = "__bery0zas-pure-it__/graphics/icons/fluid/steam.png",
     icon_size = 32,
     subgroup = "terrain",
     results =

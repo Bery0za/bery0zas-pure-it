@@ -269,14 +269,14 @@ function addSucker(entity)
 		end
 			
 		for chunk, fraction in pairs(chunks) do
-            game.print("(" .. chunk.x .. ", " .. chunk.y .. "): " .. fraction .. " / " .. totalTiles)
+            --game.print("(" .. chunk.x .. ", " .. chunk.y .. "): " .. fraction .. " / " .. totalTiles)
 			chunk.suckers[entity.unit_number].fraction = fraction / totalTiles
 		end
 end
 
 function onEntityCreated(event)
     if isAirSuctionMachine(event.created_entity) then
-        game.print(event.created_entity.name)
+        --game.print(event.created_entity.name)
 		addSucker(event.created_entity)
     end
     
@@ -331,8 +331,9 @@ end
 
 function polluteFrom(entity, fluidName, fluidAmount, pollutionAmount)
     local pollution = entity.get_fluid_count(fluidName)
-            
-    if pollution > fluidAmount * 50 then                
+	
+    if pollution > fluidAmount * 50 then
+		game.print(entity.name .. " pollutes " .. pollution)	
         entity.remove_fluid{ name = fluidName, amount = fluidAmount }
         entity.surface.pollute(entity.position, pollutionAmount)
         game.pollution_statistics.on_flow(entity.name, pollutionAmount)

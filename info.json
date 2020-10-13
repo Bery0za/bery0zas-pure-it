@@ -5,9 +5,9 @@
   "author": "Bery0za",
   "contact": "bereznevtree@yandex.ru",
   "homepage": "",
-  "factorio_version": "0.17",
+  "factorio_version": "1.0",
   "dependencies": [
-    "base >= 0.17"
+    "base >= 1.0"
   ],
   "description": "Real world air filtering!"
 }
