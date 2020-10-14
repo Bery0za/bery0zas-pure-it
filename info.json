@@ -1,13 +1,13 @@
 {
   "name": "bery0zas-pure-it",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "title": "Pure It",
   "author": "Bery0za",
   "contact": "bereznevtree@yandex.ru",
   "homepage": "",
   "factorio_version": "1.0",
   "dependencies": [
-    "base >= 1.0"
+    "base >= 0.17"
   ],
   "description": "Real world air filtering!"
 }

@@ -11,11 +11,11 @@ BRZ =
 	
 	level_tint =
 	{
-		{ r = 1.0 * 0.7, g = 0.9 * 0.7, b = 0.3 * 0.7, a = 1 },
-		{ r = 1.0 * 0.7, g = 0.2 * 0.7, b = 0 * 0.7, a = 1 },
-		{ r = 0.3 * 0.7, g = 0.1 * 0.7, b = 1.0 * 0.7, a = 1 },
-		{ r = 0.8 * 0.7, g = 0.0 * 0.7, b = 0.9 * 0.7, a = 1 },
-		{ r = 0.4 * 0.7, g = 0.9 * 0.7, b = 0 * 0.7, a = 1 },
+		{ r = 180.0 / 255.0, g = 5.0 / 255.0, b = 0.0, a = 0.5 },
+		{ r = 197.0 / 255.0, g = 155.0 / 255.0, b = 0, a = 0.5 },
+		{ r = 0.0, g = 104.0 / 255.0, b = 187.0 / 255.0, a = 0.5 },
+		{ r = 197.0 / 255.0, g = 0.0, b = 187.0 / 255.0, a = 0.5 },
+		{ r = 0.0, g = 210.0 / 255.0, b = 0.0, a = 0.5 },
 	},
 	
 	recipe_categories = 
@@ -89,35 +89,73 @@ BRZ =
 						{
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-east.png",
-								priority = "extra-high",
+                                priority = "extra-high",
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
-								shift = util.by_pixel(63, -48)
+                                shift = util.by_pixel(63, -48),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-east.png",
+                                    priority = "extra-high",
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    shift = util.by_pixel(63, -48),
+                                    scale = 0.5
+                                }
 							},
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-east-tint.png",
-								priority = "extra-high",
-								blend_mode = "normal",
+                                priority = "extra-high",
+                                flags = { "mask" },
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
-								shift = util.by_pixel(63, -48)
+								shift = util.by_pixel(63, -48),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-east-tint.png",
+                                    priority = "extra-high",
+                                    flags = { "mask" },
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    shift = util.by_pixel(63, -48),
+                                    scale = 0.5
+                                }
 							},
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-east-shadow.png",
-								priority = "medium",
+                                priority = "medium",
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
 								draw_as_shadow = true,
-								shift = util.by_pixel(63, -48)
+								shift = util.by_pixel(63, -48),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-east-shadow.png",
+                                    priority = "medium",
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(63, -48),
+                                    scale = 0.5
+                                }
 							}
 						}
 					},
@@ -127,35 +165,73 @@ BRZ =
 						{
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-north.png",
-								priority = "extra-high",
+                                priority = "extra-high",
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
-								shift = util.by_pixel(79, -34)
+								shift = util.by_pixel(79, -34),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-north.png",
+                                    priority = "extra-high",
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    shift = util.by_pixel(79, -34),
+                                    scale = 0.5
+                                }
 							},
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-north-tint.png",
-								priority = "extra-high",
-								blend_mode = "normal",
+                                priority = "extra-high",
+                                flags = { "mask" },
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
-								shift = util.by_pixel(79, -34)
+								shift = util.by_pixel(79, -34),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-north-tint.png",
+                                    priority = "extra-high",
+                                    flags = { "mask" },
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    shift = util.by_pixel(79, -34),
+                                    scale = 0.5
+                                }
 							},
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-north-shadow.png",
-								priority = "medium",
+                                priority = "medium",
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
 								draw_as_shadow = true,
-								shift = util.by_pixel(79, -34)
+								shift = util.by_pixel(79, -34),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-north-shadow.png",
+                                    priority = "medium",
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(79, -34),
+                                    scale = 0.5
+                                }
 							}
 						}
 					},			
@@ -165,35 +241,73 @@ BRZ =
 						{
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-west.png",
-								priority = "extra-high",
+                                priority = "extra-high",
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
-								shift = util.by_pixel(64, -49)
+								shift = util.by_pixel(64, -49),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-west.png",
+                                    priority = "extra-high",
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    shift = util.by_pixel(64, -49),
+                                    scale = 0.5
+                                }
 							},
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-west-tint.png",
-								priority = "extra-high",
-								blend_mode = "normal",
+                                priority = "extra-high",
+                                flags = { "mask" },
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
-								shift = util.by_pixel(64, -49)
+								shift = util.by_pixel(64, -49),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-west-tint.png",
+                                    priority = "extra-high",
+                                    flags = { "mask" },
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    shift = util.by_pixel(64, -49),
+                                    scale = 0.5
+                                }
 							},
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-west-shadow.png",
-								priority = "medium",
+                                priority = "medium",
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
 								draw_as_shadow = true,
-								shift = util.by_pixel(64, -49)
+								shift = util.by_pixel(64, -49),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-west-shadow.png",
+                                    priority = "medium",
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(64, -49),
+                                    scale = 0.5
+                                }
 							}
 						}
 					},
@@ -203,35 +317,73 @@ BRZ =
 						{
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-south.png",
-								priority = "extra-high",
+                                priority = "extra-high",
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
-								shift = util.by_pixel(80, -31)
+								shift = util.by_pixel(80, -31),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-south.png",
+                                    priority = "extra-high",
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    shift = util.by_pixel(80, -31),
+                                    scale = 0.5
+                                }
 							},
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-south-tint.png",
-								priority = "extra-high",
-								blend_mode = "normal",
+                                priority = "extra-high",
+                                flags = { "mask" },
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
-								shift = util.by_pixel(80, -31)
+								shift = util.by_pixel(80, -31),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-south-tint.png",
+                                    priority = "extra-high",
+                                    flags = { "mask" },
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    shift = util.by_pixel(80, -31),
+                                    scale = 0.5
+                                }
 							},
 							{
 								filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/suction-tower-south-shadow.png",
-								priority = "medium",
+                                priority = "medium",
 								width = 320,
 								height = 320,
 								frame_count = 8,
 								animation_speed = 1.0,
 								line_length = 3,
 								draw_as_shadow = true,
-								shift = util.by_pixel(80, -31)
+								shift = util.by_pixel(80, -31),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/suction-tower/hr-suction-tower-south-shadow.png",
+                                    priority = "medium",
+                                    width = 640,
+                                    height = 640,
+                                    frame_count = 8,
+                                    animation_speed = 1.0,
+                                    line_length = 3,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(80, -31),
+                                    scale = 0.5
+                                }
 							}
 						}
 					}
@@ -354,7 +506,19 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(31, -1)
+                                shift = util.by_pixel(31, -1),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-east.png",
+                                    priority = "extra-high",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(31, -1),
+                                    scale = 0.5
+                                }
                             },
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/absorber/absorber-east-tint.png",
@@ -365,7 +529,20 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(31, -1)
+                                shift = util.by_pixel(31, -1),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-east-tint.png",
+                                    priority = "extra-high",
+                                    blend_mode = "normal",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(31, -1),
+                                    scale = 0.5                                   
+                                }
                             },
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/absorber/absorber-east-shadow.png",
@@ -376,7 +553,20 @@ BRZ =
                                 animation_speed = 1.0,
                                 line_length = 1,
                                 draw_as_shadow = true,
-                                shift = util.by_pixel(31, -1)
+                                shift = util.by_pixel(31, -1),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-east-shadow.png",
+                                    priority = "medium",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(31, -1),
+                                    scale = 0.5                                   
+                                }
                             }
                         }
                     },
@@ -392,7 +582,19 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(32, 8)
+                                shift = util.by_pixel(32, 8),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-north.png",
+                                    priority = "extra-high",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(32, 8),
+                                    scale = 0.5                                    
+                                }
                             },
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/absorber/absorber-north-tint.png",
@@ -403,7 +605,20 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(32, 8)
+                                shift = util.by_pixel(32, 8),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-north-tint.png",
+                                    priority = "extra-high",
+                                    blend_mode = "normal",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(32, 8),
+                                    scale = 0.5                                    
+                                }
                             },
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/absorber/absorber-north-shadow.png",
@@ -414,7 +629,20 @@ BRZ =
                                 animation_speed = 1.0,
                                 line_length = 1,
                                 draw_as_shadow = true,
-                                shift = util.by_pixel(32, 8)
+                                shift = util.by_pixel(32, 8),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-north-shadow.png",
+                                    priority = "medium",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(32, 8),
+                                    scale = 0.5                                   
+                                }
                             }
                         }
                     },			
@@ -430,7 +658,19 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(31, -1)
+                                shift = util.by_pixel(31, -1),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-west.png",
+                                    priority = "extra-high",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(31, -1),
+                                    scale = 0.5                                   
+                                }
                             },
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/absorber/absorber-west-tint.png",
@@ -441,7 +681,20 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(31, -1)
+                                shift = util.by_pixel(31, -1),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-west-tint.png",
+                                    priority = "extra-high",
+                                    blend_mode = "normal",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(31, -1),
+                                    scale = 0.5                                   
+                                }
                             },
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/absorber/absorber-west-shadow.png",
@@ -452,7 +705,20 @@ BRZ =
                                 animation_speed = 1.0,
                                 line_length = 1,
                                 draw_as_shadow = true,
-                                shift = util.by_pixel(31, -1)
+                                shift = util.by_pixel(31, -1),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-west-shadow.png",
+                                    priority = "medium",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(31, -1),
+                                    scale = 0.5                                   
+                                }
                             }
                         }
                     },
@@ -468,7 +734,19 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(32, 9)
+                                shift = util.by_pixel(32, 9),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-south.png",
+                                    priority = "extra-high",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(32, 9),
+                                    scale = 0.5                                   
+                                }
                             },
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/absorber/absorber-south-tint.png",
@@ -479,7 +757,20 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(32, 9)
+                                shift = util.by_pixel(32, 9),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-south-tint.png",
+                                    priority = "extra-high",
+                                    blend_mode = "normal",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(32, 9),
+                                    scale = 0.5                                    
+                                }
                             },
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/absorber/absorber-south-shadow.png",
@@ -490,7 +781,20 @@ BRZ =
                                 animation_speed = 1.0,
                                 line_length = 1,
                                 draw_as_shadow = true,
-                                shift = util.by_pixel(32, 9)
+                                shift = util.by_pixel(32, 9),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/absorber/hr-absorber-south-shadow.png",
+                                    priority = "medium",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(32, 9),
+                                    scale = 0.5                                   
+                                }
                             }
                         }
                     }
@@ -607,19 +911,20 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(31, -33)
+                                shift = util.by_pixel(31, -33),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/adsorber/hr-adsorber-east.png",
+                                    priority = "extra-high",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(31, -33),
+                                    scale = 0.5                                    
+                                }
                             },
-                            --[[{
-                                filename = "__bery0zas-pure-it__/graphics/entity/absorber/adsorber-east-tint.png",
-                                priority = "extra-high",
-                                blend_mode = "normal",
-                                width = 224,
-                                height = 224,
-                                frame_count = 1,
-                                animation_speed = 1.0,
-                                line_length = 1,
-                                shift = util.by_pixel(31, -1)
-                            },]]--
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/adsorber/adsorber-east-shadow.png",
                                 priority = "medium",
@@ -629,7 +934,20 @@ BRZ =
                                 animation_speed = 1.0,
                                 line_length = 1,
                                 draw_as_shadow = true,
-                                shift = util.by_pixel(31, -33)
+                                shift = util.by_pixel(31, -33),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/adsorber/hr-adsorber-east-shadow.png",
+                                    priority = "medium",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(31, -33),
+                                    scale = 0.5                                    
+                                }
                             }
                         }
                     },
@@ -645,19 +963,20 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(32, -35)
+                                shift = util.by_pixel(32, -35),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/adsorber/hr-adsorber-north.png",
+                                    priority = "extra-high",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(32, -35),
+                                    scale = 0.5                                    
+                                }
                             },
-                            --[[{
-                                filename = "__bery0zas-pure-it__/graphics/entity/absorber/adsorber-north-tint.png",
-                                priority = "extra-high",
-                                blend_mode = "normal",
-                                width = 224,
-                                height = 224,
-                                frame_count = 1,
-                                animation_speed = 1.0,
-                                line_length = 1,
-                                shift = util.by_pixel(32, 8)
-                            },]]--
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/adsorber/adsorber-north-shadow.png",
                                 priority = "medium",
@@ -667,7 +986,20 @@ BRZ =
                                 animation_speed = 1.0,
                                 line_length = 1,
                                 draw_as_shadow = true,
-                                shift = util.by_pixel(32, -35)
+                                shift = util.by_pixel(32, -35),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/adsorber/hr-adsorber-north-shadow.png",
+                                    priority = "medium",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(32, -35),
+                                    scale = 0.5                                    
+                                }
                             }
                         }
                     },			
@@ -683,19 +1015,20 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(32, -32)
+                                shift = util.by_pixel(32, -32),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/adsorber/hr-adsorber-west.png",
+                                    priority = "extra-high",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(32, -32),
+                                    scale = 0.5                                   
+                                }
                             },
-                            --[[{
-                                filename = "__bery0zas-pure-it__/graphics/entity/absorber/adsorber-west-tint.png",
-                                priority = "extra-high",
-                                blend_mode = "normal",
-                                width = 224,
-                                height = 224,
-                                frame_count = 1,
-                                animation_speed = 1.0,
-                                line_length = 1,
-                                shift = util.by_pixel(31, -1)
-                            },]]--
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/adsorber/adsorber-west-shadow.png",
                                 priority = "medium",
@@ -705,7 +1038,20 @@ BRZ =
                                 animation_speed = 1.0,
                                 line_length = 1,
                                 draw_as_shadow = true,
-                                shift = util.by_pixel(32, -32)
+                                shift = util.by_pixel(32, -32),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/adsorber/hr-adsorber-west-shadow.png",
+                                    priority = "medium",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(32, -32),
+                                    scale = 0.5                                   
+                                }
                             }
                         }
                     },
@@ -721,19 +1067,20 @@ BRZ =
                                 frame_count = 1,
                                 animation_speed = 1.0,
                                 line_length = 1,
-                                shift = util.by_pixel(32, -34)
+                                shift = util.by_pixel(32, -34),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/adsorber/hr-adsorber-south.png",
+                                    priority = "extra-high",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    shift = util.by_pixel(32, -34),
+                                    scale = 0.5                                    
+                                }
                             },
-                            --[[{
-                                filename = "__bery0zas-pure-it__/graphics/entity/adsorber/adsorber-south-tint.png",
-                                priority = "extra-high",
-                                blend_mode = "normal",
-                                width = 224,
-                                height = 224,
-                                frame_count = 1,
-                                animation_speed = 1.0,
-                                line_length = 1,
-                                shift = util.by_pixel(32, 9)
-                            },]]--
                             {
                                 filename = "__bery0zas-pure-it__/graphics/entity/adsorber/adsorber-south-shadow.png",
                                 priority = "medium",
@@ -743,7 +1090,20 @@ BRZ =
                                 animation_speed = 1.0,
                                 line_length = 1,
                                 draw_as_shadow = true,
-                                shift = util.by_pixel(32, -34)
+                                shift = util.by_pixel(32, -34),
+                                hr_version =
+                                {
+                                    filename = "__bery0zas-pure-it__/graphics/entity/adsorber/hr-adsorber-south-shadow.png",
+                                    priority = "medium",
+                                    width = 448,
+                                    height = 448,
+                                    frame_count = 1,
+                                    animation_speed = 1.0,
+                                    line_length = 1,
+                                    draw_as_shadow = true,
+                                    shift = util.by_pixel(32, -34),
+                                    scale = 0.5                                   
+                                }
                             }
                         }
                     }

@@ -30,7 +30,19 @@ data:extend(
 						frame_count = 1,
 						animation_speed = 1.0,
 						line_length = 1,
-						shift = util.by_pixel(80, -82)
+						shift = util.by_pixel(80, -82),
+						hr_version =
+						{
+							filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/hr-sparging-column-east.png",
+							priority = "extra-high",
+							width = 576,
+							height = 576,
+							frame_count = 1,
+							animation_speed = 1.0,
+							line_length = 1,
+							shift = util.by_pixel(80, -82),
+							scale = 0.5
+						}
 					},
 					{
 						filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/sparging-column-east-shadow.png",
@@ -41,7 +53,20 @@ data:extend(
 						animation_speed = 1.0,
 						line_length = 1,
 						draw_as_shadow = true,
-						shift = util.by_pixel(80, -82)
+						shift = util.by_pixel(80, -82),
+						hr_version =
+						{
+							filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/hr-sparging-column-east-shadow.png",
+							priority = "medium",
+							width = 576,
+							height = 576,
+							frame_count = 1,
+							animation_speed = 1.0,
+							line_length = 1,
+							draw_as_shadow = true,
+							shift = util.by_pixel(80, -82),
+							scale = 0.5
+						}
 					}
 				}
 			},
@@ -57,7 +82,19 @@ data:extend(
 						frame_count = 1,
 						animation_speed = 1.0,
 						line_length = 1,
-						shift = util.by_pixel(78, -72)
+						shift = util.by_pixel(78, -72),
+						hr_version =
+						{
+							filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/hr-sparging-column-north.png",
+							priority = "extra-high",
+							width = 576,
+							height = 576,
+							frame_count = 1,
+							animation_speed = 1.0,
+							line_length = 1,
+							shift = util.by_pixel(78, -72),
+							scale = 0.5
+						}
 					},
 					{
 						filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/sparging-column-north-shadow.png",
@@ -68,7 +105,20 @@ data:extend(
 						animation_speed = 1.0,
 						line_length = 1,
 						draw_as_shadow = true,
-						shift = util.by_pixel(78, -72)
+						shift = util.by_pixel(78, -72),
+						hr_version =
+						{
+							filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/hr-sparging-column-north-shadow.png",
+							priority = "medium",
+							width = 576,
+							height = 576,
+							frame_count = 1,
+							animation_speed = 1.0,
+							line_length = 1,
+							draw_as_shadow = true,
+							shift = util.by_pixel(78, -72),
+							scale = 0.5
+						}
 					}
 				}
 			},			
@@ -84,7 +134,19 @@ data:extend(
 						frame_count = 1,
 						animation_speed = 1.0,
 						line_length = 1,
-						shift = util.by_pixel(80, -66)
+						shift = util.by_pixel(80, -66),
+						hr_version =
+						{
+							filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/hr-sparging-column-west.png",
+							priority = "extra-high",
+							width = 576,
+							height = 576,
+							frame_count = 1,
+							animation_speed = 1.0,
+							line_length = 1,
+							shift = util.by_pixel(80, -66),
+							scale = 0.5
+						}
 					},
 					{
 						filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/sparging-column-west-shadow.png",
@@ -95,7 +157,20 @@ data:extend(
 						animation_speed = 1.0,
 						line_length = 1,
 						draw_as_shadow = true,
-						shift = util.by_pixel(80, -66)
+						shift = util.by_pixel(80, -66),
+						hr_version =
+						{
+							filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/hr-sparging-column-west-shadow.png",
+							priority = "medium",
+							width = 576,
+							height = 576,
+							frame_count = 1,
+							animation_speed = 1.0,
+							line_length = 1,
+							draw_as_shadow = true,
+							shift = util.by_pixel(80, -66),
+							scale = 0.5
+						}
 					}
 				}
 			},
@@ -111,7 +186,19 @@ data:extend(
 						frame_count = 1,
 						animation_speed = 1.0,
 						line_length = 1,
-						shift = util.by_pixel(78, -72)
+						shift = util.by_pixel(78, -72),
+						hr_version =
+						{
+							filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/hr-sparging-column-south.png",
+							priority = "extra-high",
+							width = 576,
+							height = 576,
+							frame_count = 1,
+							animation_speed = 1.0,
+							line_length = 1,
+							shift = util.by_pixel(78, -72),
+							scale = 0.5
+						}
 					},
 					{
 						filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/sparging-column-south-shadow.png",
@@ -122,7 +209,20 @@ data:extend(
 						animation_speed = 1.0,
 						line_length = 1,
 						draw_as_shadow = true,
-						shift = util.by_pixel(78, -72)
+						shift = util.by_pixel(78, -72),
+						hr_version =
+						{
+							filename = "__bery0zas-pure-it__/graphics/entity/sparging-column/hr-sparging-column-south-shadow.png",
+							priority = "medium",
+							width = 576,
+							height = 576,
+							frame_count = 1,
+							animation_speed = 1.0,
+							line_length = 1,
+							draw_as_shadow = true,
+							shift = util.by_pixel(78, -72),
+							scale = 0.5
+						}
 					}
 				}
 			}
@@ -205,19 +305,21 @@ function register_entity(template, num_tiers)
         
         if (num_tiers > 1 and i < num_tiers) then
             proto.next_upgrade = name .. "-" .. (i + 1)
-        end
+		end
         
         if (template.has_tint) then
             proto.icons[1].tint = color_tint
         
             for _, v in pairs(proto.animation or proto.idle_animation) do
-                v.layers[2].tint = color_tint
+				v.layers[2].tint = color_tint
+				v.layers[2].hr_version.tint = color_tint
             end
         elseif (num_tiers > 1) then   
             proto.icons[1].tint = color_tint
             
             for _, v in pairs(proto.animation or proto.idle_animation) do
-                v.layers[1].tint = color_tint
+				v.layers[1].tint = color_tint
+				v.layers[1].hr_version.tint = color_tint
             end
         end        
         

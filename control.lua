@@ -6,6 +6,9 @@ local POLLUTED_WATER_AMOUNT = POLLUTION_AMOUNT * 2
 
 local BASE_SUCTION_RADIUS = 16
 
+local POLLUTE_FROM_BOXES_ENABLED = true
+local COLLECTED_POLLUTION_AMOUNT = 50
+
 local air_sucked_chunks = {}
 
 function starts_with(str, start)
@@ -332,8 +335,8 @@ end
 function polluteFrom(entity, fluidName, fluidAmount, pollutionAmount)
     local pollution = entity.get_fluid_count(fluidName)
 	
-    if pollution > fluidAmount * 50 then
-		game.print(entity.name .. " pollutes " .. pollution)	
+    if pollution > fluidAmount * COLLECTED_POLLUTION_AMOUNT then
+		--game.print(entity.name .. " pollutes " .. pollution)	
         entity.remove_fluid{ name = fluidName, amount = fluidAmount }
         entity.surface.pollute(entity.position, pollutionAmount)
         game.pollution_statistics.on_flow(entity.name, pollutionAmount)
@@ -356,7 +359,7 @@ function absorbPollution(event)
 end
 
 function onTick(event)
-    if game.tick % POLLUTION_INTERVAL == 0 then      
+    if (POLLUTE_FROM_BOXES_ENABLED and game.tick % POLLUTION_INTERVAL == 0) then      
         polluteFromBoxes()
     end
     
@@ -403,6 +406,9 @@ function load()
             end
         end
     end
+
+    POLLUTE_FROM_BOXES_ENABLED = settings.startup["bery0zas-pure-it-pollutefromboxes"].value
+    COLLECTED_POLLUTION_AMOUNT = settings.startup["bery0zas-pure-it-amountofcollectedpollution"].value
 end
 
 script.on_event({ defines.events.on_built_entity, defines.events.on_robot_built_entity }, onEntityCreated)
