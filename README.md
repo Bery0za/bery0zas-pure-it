@@ -1,4 +1,6 @@
-Please note that this is a **Work-In-Progress** mod, so things will change often. Don't forget to make a backup copy of your immersive constructions.
+# Bery0za's Pure It
+![Alt text](https://mods-data.factorio.com/assets/ea2ea69ca4bd10c500db4e6042563fabcd9ee8a3.png)
+Brand new Factorio mod allowing you to make the skies brighter amd clearer. Please note that this is a **Work-In-Progress** mod, so things will change often. Don't forget to make a backup copy of your immersive constructions.
 
 ## Idea and philosophy
 The idea of this mod came to me after long play sessions with my friend, during which we raided local fauna and its nests. Quite aggressive fauna need to say. That’s understandable: you’re here on your own planet, growing your lovely bloody toxic children, but suddenly a cloud of acids comes to your place and makes your life awful. So, you rise up an army to fight back and destroy all those blast furnaces and chemical plants to the ground. But actually, those are our plants, and we don’t like them to be demolished on our way to the bright future. So, I decided to make the life on the planet slightly brighter. Literally. By making the skies clearer and purer.
