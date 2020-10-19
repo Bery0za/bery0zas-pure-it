@@ -15,6 +15,7 @@ Operational radii of air sucking machines are *8, 16, and 24* tiles for *Mk1, Mk
 - [ ] Balancing
 - [ ] New recipe chains (Calcium hydroxide)
 - [ ] Animation, sprites and icons tweaks (tint!)
+- [ ] Integration with other mods
 - [ ] Localization
 
 ## Bugs and suggestions
