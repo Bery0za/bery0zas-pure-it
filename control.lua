@@ -47,7 +47,7 @@ function inChunk(chunk, position)
 end
 
 function isAirSuctionMachine(entity)
-    return starts_with(entity.name, "air-suction-tower")
+    return starts_with(entity.name, "bery0zas-air-suction-tower")
 end
 
 function getSuctionRadius(entity)    
@@ -210,7 +210,7 @@ function FilteredChunk:absorb()
         local toInsert = (getAbsorptionRate(sucker.entity) * sucker.fraction / totalAbsorptionRate) * toAbsorb
         
         if toInsert > 0 then
-            local insertedAmount = sucker.entity.insert_fluid({ name = "pollution", amount = toInsert })
+            local insertedAmount = sucker.entity.insert_fluid({ name = "bery0zas-pollution", amount = toInsert })
             game.pollution_statistics.on_flow(sucker.entity.name, -insertedAmount)
             totalInsertedAmount = totalInsertedAmount + insertedAmount
         end
@@ -296,8 +296,8 @@ function onEntityRemoved(event)
     end
     
     local pollution = 0.0
-    pollution = pollution + event.entity.get_fluid_count("polluted-air")
-    pollution = pollution + event.entity.get_fluid_count("polluted-water") * 0.5
+    pollution = pollution + event.entity.get_fluid_count("bery0zas-polluted-air")
+    pollution = pollution + event.entity.get_fluid_count("bery0zas-polluted-water") * 0.5
 
     if pollution > 0 then        
         event.entity.surface.pollute(event.entity.position, pollution)
@@ -318,7 +318,7 @@ function preEntityRemoved(event)
 
         if recipe ~= nil then
             for _, ingredient in pairs(recipe.ingredients) do
-                if ingredient.name == "pollution" or ingredient.name == "polluted-air" then
+                if ingredient.name == "bery0zas-pollution" or ingredient.name == "bery0zas-polluted-air" then
                     pollution = pollution + ingredient.amount
                     break
                 end
@@ -344,10 +344,12 @@ function polluteFrom(entity, fluidName, fluidAmount, pollutionAmount)
 end
 
 function polluteFromBoxes()
-    for _, entity in pairs(global.entities_with_fluidboxes) do        
-        if entity.valid then
-            polluteFrom(entity, "polluted-air", POLLUTION_AMOUNT, POLLUTION_AMOUNT)
-            polluteFrom(entity, "polluted-water", POLLUTED_WATER_AMOUNT, POLLUTION_AMOUNT)
+    if (POLLUTE_FROM_BOXES_ENABLED) then
+        for _, entity in pairs(global.entities_with_fluidboxes) do        
+            if entity.valid then
+                polluteFrom(entity, "bery0zas-polluted-air", POLLUTION_AMOUNT, POLLUTION_AMOUNT)
+                polluteFrom(entity, "bery0zas-polluted-water", POLLUTED_WATER_AMOUNT, POLLUTION_AMOUNT)
+            end
         end
     end
 end
@@ -386,7 +388,7 @@ function init()
     for _, surface in pairs(game.surfaces) do
         local suckers = surface.find_entities_filtered 
         {
-            name = { "air-suction-tower-1", "air-suction-tower-2", "air-suction-tower-3" }
+            name = { "bery0zas-air-suction-tower-1", "bery0zas-air-suction-tower-2", "bery0zas-air-suction-tower-3" }
         }
 
         for _, sucker in pairs(suckers) do
@@ -414,7 +416,6 @@ end
 script.on_event({ defines.events.on_built_entity, defines.events.on_robot_built_entity }, onEntityCreated)
 script.on_event({ defines.events.on_pre_player_mined_item, defines.events.on_pre_robot_mined_item, defines.events.on_entity_died }, preEntityRemoved)
 script.on_event({ defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.on_entity_died }, onEntityRemoved)
---script.on_event({ defines.events.on_tick }, onTick)
 script.on_nth_tick(POLLUTION_INTERVAL, polluteFromBoxes)
 script.on_nth_tick(INTERVAL, absorbPollution)
 

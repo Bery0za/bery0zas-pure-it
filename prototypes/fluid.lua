@@ -1,7 +1,7 @@
 data:extend({
 	{
         type = "fluid",
-        name = "pollution",
+        name = "bery0zas-pollution",
         default_temperature = 15,
         max_temperature = 100,
         gas_temperature = 0,
@@ -13,7 +13,7 @@ data:extend({
     },
 	{
         type = "fluid",
-        name = "polluted-air",
+        name = "bery0zas-polluted-air",
         default_temperature = 15,
         max_temperature = 100,
         gas_temperature = 0,
@@ -25,7 +25,7 @@ data:extend({
     },    
 	{
         type = "fluid",
-        name = "oxygen",
+        name = "bery0zas-oxygen",
         default_temperature = 15,
         max_temperature = 100,
         gas_temperature = 0,
@@ -37,7 +37,7 @@ data:extend({
     },
 	{
         type = "fluid",
-        name = "sodium-hydroxide",
+        name = "bery0zas-sodium-hydroxide",
         default_temperature = 15,
         max_temperature = 100,
         gas_temperature = 0,
@@ -49,7 +49,7 @@ data:extend({
     },	
     {
         type = "fluid",
-        name = "oxygen-sparged-water",
+        name = "bery0zas-oxygen-sparged-water",
         default_temperature = 15,
         max_temperature = 100,
         base_color = { r = 0.62, g = 0.7, b = 0.95 },
@@ -60,7 +60,7 @@ data:extend({
     },
 	{
         type = "fluid",
-        name = "sodium-hydroxide-sparged-water",
+        name = "bery0zas-sodium-hydroxide-sparged-water",
         default_temperature = 15,
         max_temperature = 100,
         base_color = { r = 0.87, g = 0.7, b = 0.95 },
@@ -71,7 +71,7 @@ data:extend({
     },
 	{
         type = "fluid",
-        name = "polluted-water",
+        name = "bery0zas-polluted-water",
         default_temperature = 15,
         max_temperature = 100,
         base_color = { r = 0.06, g = 0.2, b = 0.22 },

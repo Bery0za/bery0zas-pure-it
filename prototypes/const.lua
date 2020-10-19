@@ -1,3 +1,5 @@
+require("prototypes.functions")
+
 BRZ =
 {
 	crafting_speeds =
@@ -11,8 +13,8 @@ BRZ =
 	
 	level_tint =
 	{
-		{ r = 180.0 / 255.0, g = 5.0 / 255.0, b = 0.0, a = 0.5 },
-		{ r = 197.0 / 255.0, g = 155.0 / 255.0, b = 0, a = 0.5 },
+		{ r = 197.0 / 255.0, g = 155.0 / 255.0, b = 0.0, a = 0.5 },
+		{ r = 180.0 / 255.0, g = 5.0 / 255.0, b = 0, a = 0.5 },
 		{ r = 0.0, g = 104.0 / 255.0, b = 187.0 / 255.0, a = 0.5 },
 		{ r = 197.0 / 255.0, g = 0.0, b = 187.0 / 255.0, a = 0.5 },
 		{ r = 0.0, g = 210.0 / 255.0, b = 0.0, a = 0.5 },
@@ -20,28 +22,28 @@ BRZ =
 	
 	recipe_categories = 
 	{
-		"air-filtering-machine",
-        "air-filtering-item",
-		"air-filtering-suction",
-		"air-filtering-sparging",
-		"air-filtering-chemistry",
-		"air-filtering-absorption",
-		"air-filtering-adsorption",
-		"air-filtering-burning"
+		"bery0zas-air-filtering-machine",
+        "bery0zas-air-filtering-item",
+		"bery0zas-air-filtering-suction",
+		"bery0zas-air-filtering-sparging",
+		"bery0zas-air-filtering-chemistry",
+		"bery0zas-air-filtering-absorption",
+		"bery0zas-air-filtering-adsorption",
+		"bery0zas-air-filtering-burning"
 	},
 	
 	entities =
 	{
 		air_suction_tower = 
 		{
-			base_name = "air-suction-tower",
+			base_name = "bery0zas-air-suction-tower",
 			
 			entity = 
 			{
 				type = "assembling-machine",                
-                fast_replaceable_group = "air-sucker",
+                fast_replaceable_group = "bery0zas-air-sucker",
                 flags = { "placeable-neutral", "placeable-player", "player-creation" },
-				minable = { mining_time = 0.5, result = "air-suction-tower" },				
+				minable = { mining_time = 0.5, result = "bery0zas-air-suction-tower" },				
 				max_health = 150,
 				corpse = "medium-remnants",   
                 
@@ -56,7 +58,8 @@ BRZ =
 						pipe_connections = {}
 					},
 					{
-						production_type = "output",
+                        production_type = "output",
+                        pipe_picture = bery0zaspipepictures(),
 						pipe_covers = pipecoverspictures(),
 						base_area = 10,
 						base_level = 1,
@@ -64,8 +67,8 @@ BRZ =
 					}
 				},
 				
-                crafting_categories = { "air-filtering-suction" },
-				fixed_recipe = "air-suction",
+                crafting_categories = { "bery0zas-air-filtering-suction" },
+				fixed_recipe = "bery0zas-air-suction",
                 energy_source =
 				{
 					type = "electric",
@@ -418,7 +421,7 @@ BRZ =
 			base_recipe = 
 			{
 				type = "recipe",
-				category = "air-filtering-machine",
+				category = "bery0zas-air-filtering-machine",
 				energy_required = 20.0,
 				ingredients =
 				{
@@ -438,14 +441,14 @@ BRZ =
 		},
         air_absorber = 
         {
-            base_name = "air-absorber",
+            base_name = "bery0zas-air-absorber",
             
             entity = 
             {
                 type = "assembling-machine",
-                fast_replaceable_group = "air-absorber",
+                fast_replaceable_group = "bery0zas-air-absorber",
                 flags = { "placeable-neutral", "placeable-player", "player-creation" },
-                minable = { mining_time = 0.5, result = "air-absorber" },                
+                minable = { mining_time = 0.5, result = "bery0zas-air-absorber" },                
                 max_health = 150,
                 corpse = "medium-remnants",
                 
@@ -455,6 +458,7 @@ BRZ =
                 {
                     {
                         production_type = "input",
+                        pipe_picture = bery0zaspipepictures(),
                         pipe_covers = pipecoverspictures(),
                         base_area = 10,
                         base_level = -1,
@@ -462,6 +466,7 @@ BRZ =
                     },
                     {
                         production_type = "input",
+                        pipe_picture = bery0zaspipepictures(),
                         pipe_covers = pipecoverspictures(),
                         base_area = 10,
                         base_level = -1,
@@ -469,6 +474,7 @@ BRZ =
                     },
                     {
                         production_type = "output",
+                        pipe_picture = bery0zaspipepictures(),
                         pipe_covers = pipecoverspictures(),
                         base_area = 10,
                         base_level = 1,
@@ -476,7 +482,7 @@ BRZ =
                     },
                 },
                 
-                crafting_categories = { "air-filtering-absorption" },
+                crafting_categories = { "bery0zas-air-filtering-absorption" },
                 return_ingredients_on_change = true,
                 energy_source =
                 {
@@ -829,7 +835,7 @@ BRZ =
 			base_recipe = 
 			{
 				type = "recipe",
-				category = "air-filtering-machine",
+				category = "bery0zas-air-filtering-machine",
 				energy_required = 20.0,
 				ingredients =
 				{
@@ -850,14 +856,14 @@ BRZ =
         },
 		air_adsorber = 
         {
-            base_name = "air-adsorber",
+            base_name = "bery0zas-air-adsorber",
             
             entity = 
             {
                 type = "assembling-machine",
-                fast_replaceable_group = "air-adsorber",
+                fast_replaceable_group = "bery0zas-air-adsorber",
                 flags = { "placeable-neutral", "placeable-player", "player-creation" },
-                minable = { mining_time = 0.5, result = "air-adsorber" },                
+                minable = { mining_time = 0.5, result = "bery0zas-air-adsorber" },                
                 max_health = 150,
                 corpse = "medium-remnants",
                 
@@ -867,6 +873,7 @@ BRZ =
                 {
                     {
                         production_type = "input",
+                        pipe_picture = bery0zaspipepictures(),
                         pipe_covers = pipecoverspictures(),
                         base_area = 10,
                         base_level = -1,
@@ -874,6 +881,7 @@ BRZ =
                     },
                     {
                         production_type = "input",
+                        pipe_picture = bery0zaspipepictures(),
                         pipe_covers = pipecoverspictures(),
                         base_area = 10,
                         base_level = -1,
@@ -881,7 +889,7 @@ BRZ =
                     }
                 },
                 
-                crafting_categories = { "air-filtering-adsorption" },
+                crafting_categories = { "bery0zas-air-filtering-adsorption" },
                 return_ingredients_on_change = true,
                 energy_source =
                 {
@@ -1138,7 +1146,7 @@ BRZ =
 			base_recipe = 
 			{
 				type = "recipe",
-				category = "air-filtering-machine",
+				category = "bery0zas-air-filtering-machine",
 				energy_required = 20.0,
 				ingredients =
 				{

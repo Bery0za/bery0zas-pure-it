@@ -2,7 +2,7 @@ data:extend(
 {
 	{
 		type = "technology",
-		name = "air-purification-1",
+		name = "bery0zas-air-purification-1",
 		--localised_name = {"technology-name.air-purification-1"},
 		--localised_description = {"technology-description.air-purification-1"},
 		icon_size = 128,
@@ -11,47 +11,47 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "air-suction-tower-1"
+				recipe = "bery0zas-air-suction-tower-1"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "air-absorber-1"
+				recipe = "bery0zas-air-absorber-1"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "air-adsorber-1"
+				recipe = "bery0zas-air-adsorber-1"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "spray-surface"
+				recipe = "bery0zas-spray-surface"
 			},			
 			{
 				type = "unlock-recipe",
-				recipe = "air-suction"
+				recipe = "bery0zas-air-suction"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "water-absorption"
+				recipe = "bery0zas-water-absorption"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "water-absorption-with-spraying"
+				recipe = "bery0zas-water-absorption-with-spraying"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "spray-surface-recycling"
+				recipe = "bery0zas-spray-surface-recycling"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "polluted-water-recycling"
+				recipe = "bery0zas-polluted-water-recycling"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "coal-adsorption"
+				recipe = "bery0zas-coal-adsorption"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "coal-adsorption-with-steam"
+				recipe = "bery0zas-coal-adsorption-with-steam"
 			}
 		},
 		unit =
@@ -68,7 +68,7 @@ data:extend(
 	},
 	{
 		type = "technology",
-		name = "air-purification-2",
+		name = "bery0zas-air-purification-2",
 		--localised_name = {"technology-name.air-purification-2"},
 		--localised_description = {"technology-description.air-purification-2"},
 		icon_size = 128,
@@ -77,47 +77,47 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "air-suction-tower-2"
+				recipe = "bery0zas-air-suction-tower-2"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "air-absorber-2"
+				recipe = "bery0zas-air-absorber-2"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "sparging-column"
+				recipe = "bery0zas-sparging-column"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "adsorption-coil-mk1"
+				recipe = "bery0zas-adsorption-coil-mk1"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "activated-carbon"
+				recipe = "bery0zas-activated-carbon"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "adsorption-coil-mk1-with-activated-carbon"
+				recipe = "bery0zas-adsorption-coil-mk1-with-activated-carbon"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "oxygen-extraction"
+				recipe = "bery0zas-oxygen-extraction"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "oxygen-sparging"
+				recipe = "bery0zas-oxygen-sparging"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "oxygen-sparged-water-absorption"
+				recipe = "bery0zas-oxygen-sparged-water-absorption"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "oxygen-sparged-water-absorption-with-spraying"
+				recipe = "bery0zas-oxygen-sparged-water-absorption-with-spraying"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "activated-carbon-adsorption"
+				recipe = "bery0zas-activated-carbon-adsorption"
 			}
 		},
 		unit =
@@ -131,11 +131,11 @@ data:extend(
 			},
 			time = 25
 		},
-		prerequisites = { "air-purification-1", "oil-processing", "chemical-science-pack" }
+		prerequisites = { "bery0zas-air-purification-1", "oil-processing", "chemical-science-pack" }
 	},
 	{
 		type = "technology",
-		name = "air-purification-3",
+		name = "bery0zas-air-purification-3",
 		--localised_name = {"technology-name.air-purification-3"},
 		--localised_description = {"technology-description.air-purification-3"},
 		icon_size = 128,
@@ -144,51 +144,51 @@ data:extend(
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "air-suction-tower-3"
+				recipe = "bery0zas-air-suction-tower-3"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "air-absorber-3"
+				recipe = "bery0zas-air-absorber-3"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "iron-halite-extraction"
+				recipe = "bery0zas-iron-halite-extraction"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "copper-halite-extraction"
+				recipe = "bery0zas-copper-halite-extraction"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "adsorption-coil-mk2"
+				recipe = "bery0zas-adsorption-coil-mk2"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "cellular-carbon"
+				recipe = "bery0zas-cellular-carbon"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "adsorption-coil-mk2-with-cellular-carbon"
+				recipe = "bery0zas-adsorption-coil-mk2-with-cellular-carbon"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "sodium-hydroxide"
+				recipe = "bery0zas-sodium-hydroxide"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "sodium-hydroxide-sparging"
+				recipe = "bery0zas-sodium-hydroxide-sparging"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "sodium-hydroxide-sparged-water-absorption"
+				recipe = "bery0zas-sodium-hydroxide-sparged-water-absorption"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "sodium-hydroxide-sparged-water-absorption-with-spraying"
+				recipe = "bery0zas-sodium-hydroxide-sparged-water-absorption-with-spraying"
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "cellular-carbon-adsorption"
+				recipe = "bery0zas-cellular-carbon-adsorption"
 			}
 		},
 		unit =
@@ -202,6 +202,6 @@ data:extend(
 			},
 			time = 30
 		},
-		prerequisites = { "air-purification-2", "advanced-oil-processing" }
+		prerequisites = { "bery0zas-air-purification-2", "advanced-oil-processing" }
 	},
 })

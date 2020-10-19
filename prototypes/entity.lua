@@ -1,12 +1,14 @@
+require("prototypes.functions")
+  
 data:extend(
 {
 	{
         type = "assembling-machine",
-        name = "sparging-column",
+        name = "bery0zas-sparging-column",
         icon = "__bery0zas-pure-it__/graphics/icons/sparging-column.png",
         icon_size = 32,
         flags = { "placeable-neutral", "placeable-player", "player-creation" },
-        minable = { mining_time = 0.5, result = "sparging-column" },
+        minable = { mining_time = 0.5, result = "bery0zas-sparging-column" },
         --fast_replaceable_group = "air-sucker",
 		--next_upgrade = "air-sucker-2",
         max_health = 150,
@@ -240,25 +242,25 @@ data:extend(
 		{
 			{
 				production_type = "input",
-				--pipe_picture = assembler3pipepictures(),
+				pipe_picture = bery0zaspipepictures(),
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = -1,
 				pipe_connections = {{ type = "input", position = { -1, -1.5 } }},
-				--secondary_draw_orders = { north = -1 }
+				secondary_draw_orders = { north = -1 }
 			},
 			{
 				production_type = "input",
-				--pipe_picture = assembler3pipepictures(),
+				pipe_picture = bery0zaspipepictures(),
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = -1,
 				pipe_connections = {{ type = "input", position = { 1, -1.5 } }},
-				--secondary_draw_orders = { north = -1 }
+				secondary_draw_orders = { north = -1 }
 			},
 			{
 				production_type = "output",
-				--pipe_picture = assembler3pipepictures(),
+				pipe_picture = bery0zaspipepictures(),
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = 1,
@@ -267,11 +269,11 @@ data:extend(
 					{ type = "output", position = { -1, 1.5 } },
 					{ type = "output", position = { 1, 1.5 } },
 				},
-				--secondary_draw_orders = { north = -1 }
+				secondary_draw_orders = { north = -1 }
 			},
 			--off_when_no_fluid_recipe = true
 		},
-        crafting_categories = { "air-filtering-sparging" },
+        crafting_categories = { "bery0zas-air-filtering-sparging" },
         crafting_speed = 0.5,
 		energy_source =
         {
