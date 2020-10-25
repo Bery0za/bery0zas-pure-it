@@ -4,6 +4,7 @@ data:extend(
         type = "recipe",
         name = "bery0zas-sparging-column",
         category = "bery0zas-air-filtering-machine",
+        enabled = false,
         energy_required = 10.0,
         ingredients =
         {
@@ -20,6 +21,7 @@ data:extend(
 		name = "bery0zas-spray-surface",
 		energy_required = 10,
 		category = "bery0zas-air-filtering-item",
+    enabled = false,
 		ingredients =
 		{
 			{"iron-plate", 3},
@@ -38,6 +40,7 @@ data:extend(
 		name = "bery0zas-adsorption-coil-mk1",
 		energy_required = 10,
 		category = "bery0zas-air-filtering-item",
+    enabled = false,
 		ingredients =
 		{
 			{"iron-plate", 3},
@@ -56,6 +59,7 @@ data:extend(
 		name = "bery0zas-adsorption-coil-mk2",
 		energy_required = 10,
 		category = "bery0zas-air-filtering-item",
+    enabled = false,
 		ingredients =
 		{
 			{"steel-plate", 3},
@@ -74,6 +78,7 @@ data:extend(
 		name = "bery0zas-adsorption-coil-mk1-with-activated-carbon",
 		energy_required = 5,
 		category = "bery0zas-air-filtering-item",
+    enabled = false,
 		ingredients =
 		{
 			{"bery0zas-adsorption-coil-mk1", 1},
@@ -92,6 +97,7 @@ data:extend(
 		name = "bery0zas-adsorption-coil-mk2-with-cellular-carbon",
 		energy_required = 5,
 		category = "bery0zas-air-filtering-item",
+    enabled = false,
 		ingredients =
 		{
 			{"bery0zas-adsorption-coil-mk2", 1},
@@ -110,6 +116,7 @@ data:extend(
 		name = "bery0zas-spray-surface-recycling",
 		energy_required = 10,
 		category = "bery0zas-air-filtering-burning",
+    enabled = false,
 		ingredients =
 		{
 			{ "bery0zas-polluted-spray-surface", 1 },
@@ -128,6 +135,7 @@ data:extend(
 		name = "bery0zas-polluted-water-recycling",
 		energy_required = 10,
 		category = "bery0zas-air-filtering-chemistry",
+    enabled = false,
 		ingredients =
 		{
 			{ type = "fluid", name = "bery0zas-polluted-water", amount = 20 }
@@ -149,6 +157,7 @@ data:extend(
     name = "bery0zas-iron-halite-extraction",
     energy_required = 10,
     category = "bery0zas-air-filtering-item",
+    enabled = false,
     ingredients =
 	{
 		{ "iron-ore", 20 },
@@ -167,6 +176,7 @@ data:extend(
     name = "bery0zas-copper-halite-extraction",
     energy_required = 10,
     category = "bery0zas-air-filtering-item",
+    enabled = false,
     ingredients =
 	{
 		{ "copper-ore", 20 },
@@ -185,6 +195,7 @@ data:extend(
     name = "bery0zas-activated-carbon",
     energy_required = 10,
     category = "bery0zas-air-filtering-chemistry",
+    enabled = false,
     ingredients =
 	{
 		{ type = "item", name = "coal", amount = 5 },
@@ -203,6 +214,7 @@ data:extend(
     name = "bery0zas-cellular-carbon",
     energy_required = 10,
     category = "bery0zas-air-filtering-chemistry",
+    enabled = false,
     ingredients =
 	{
 		{ type = "item", name = "bery0zas-activated-carbon", amount = 5 },
@@ -221,6 +233,7 @@ data:extend(
     name = "bery0zas-sodium-hydroxide",
     energy_required = 10,
     category = "bery0zas-air-filtering-chemistry",
+    enabled = false,
     ingredients =
 	{
 		{ type = "fluid", name = "water", amount = 10 },
@@ -240,6 +253,7 @@ data:extend(
     name = "bery0zas-oxygen-extraction",
     energy_required = 10,
     category = "bery0zas-air-filtering-chemistry",
+    enabled = false,
     ingredients =
 	{
 
@@ -258,6 +272,7 @@ data:extend(
     name = "bery0zas-oxygen-sparging",
     energy_required = 20,
     category = "bery0zas-air-filtering-sparging",
+    enabled = false,
     ingredients =
 	{
     { type = "fluid", name = "water", amount = 10 },
@@ -277,6 +292,7 @@ data:extend(
     name = "bery0zas-sodium-hydroxide-sparging",
     energy_required = 20,
     category = "bery0zas-air-filtering-sparging",
+    enabled = false,
     ingredients =
 	{
 		{ type = "fluid", name= "water", amount = 10 },
@@ -296,6 +312,7 @@ data:extend(
     name = "bery0zas-air-suction",
     energy_required = 1,
     category = "bery0zas-air-filtering-suction",
+    enabled = false,
     ingredients =
 	{
 		{ type = "fluid", name = "bery0zas-pollution", amount = 1, fluidbox_index = 1 },
@@ -314,6 +331,7 @@ data:extend(
     name = "bery0zas-water-absorption",
     energy_required = 20,
     category = "bery0zas-air-filtering-absorption",
+    enabled = false,
     ingredients =
 	{
 		{ type = "fluid", name= "water", amount = 2, fluidbox_index = 1 },
@@ -333,6 +351,7 @@ data:extend(
     name = "bery0zas-oxygen-sparged-water-absorption",
     energy_required = 20,
     category = "bery0zas-air-filtering-absorption",
+    enabled = false,
     ingredients =
 	{		
 		{ type = "fluid", name= "bery0zas-oxygen-sparged-water", amount = 5, fluidbox_index = 1 },
@@ -352,6 +371,7 @@ data:extend(
     name = "bery0zas-sodium-hydroxide-sparged-water-absorption",
     energy_required = 20,
     category = "bery0zas-air-filtering-absorption",
+    enabled = false,
     ingredients =
 	{		
 		{ type = "fluid", name= "bery0zas-sodium-hydroxide-sparged-water", amount = 10, fluidbox_index = 1 },
@@ -371,6 +391,7 @@ data:extend(
     name = "bery0zas-water-absorption-with-spraying",
     energy_required = 10,
     category = "bery0zas-air-filtering-absorption",
+    enabled = false,
     ingredients =
 	{
 		{ type = "fluid", name= "water", amount = 2, fluidbox_index = 1 },
@@ -391,6 +412,7 @@ data:extend(
     name = "bery0zas-oxygen-sparged-water-absorption-with-spraying",
     energy_required = 10,
     category = "bery0zas-air-filtering-absorption",
+    enabled = false,
     ingredients =
 	{		
 		{ type = "fluid", name= "bery0zas-oxygen-sparged-water", amount = 5, fluidbox_index = 1 },
@@ -411,6 +433,7 @@ data:extend(
     name = "bery0zas-sodium-hydroxide-sparged-water-absorption-with-spraying",
     energy_required = 10,
     category = "bery0zas-air-filtering-absorption",
+    enabled = false,
     ingredients =
 	{		
 		{ type = "fluid", name= "bery0zas-sodium-hydroxide-sparged-water", amount = 10, fluidbox_index = 1 },
@@ -431,6 +454,7 @@ data:extend(
     name = "bery0zas-coal-adsorption",
     energy_required = 10,
     category = "bery0zas-air-filtering-adsorption",
+    enabled = false,
     ingredients =
 	{
 		{ type = "item", name= "coal", amount = 10 },
@@ -449,6 +473,7 @@ data:extend(
     name = "bery0zas-coal-adsorption-with-steam",
     energy_required = 10,
     category = "bery0zas-air-filtering-adsorption",
+    enabled = false,
     ingredients =
 	{
 		{ type = "item", name= "coal", amount = 5 },		
@@ -468,6 +493,7 @@ data:extend(
     name = "bery0zas-activated-carbon-adsorption",
     energy_required = 10,
     category = "bery0zas-air-filtering-adsorption",
+    enabled = false,
     ingredients =
 	{
 		{ type = "item", name= "bery0zas-adsorption-coil-mk1-with-activated-carbon", amount = 5 },
@@ -487,6 +513,7 @@ data:extend(
     name = "bery0zas-cellular-carbon-adsorption",
     energy_required = 10,
     category = "bery0zas-air-filtering-adsorption",
+    enabled = false,
     ingredients =
 	{
 		{ type = "item", name= "bery0zas-adsorption-coil-mk2-with-cellular-carbon", amount = 2 },
