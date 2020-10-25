@@ -421,7 +421,8 @@ BRZ =
 			base_recipe = 
 			{
 				type = "recipe",
-				category = "bery0zas-air-filtering-machine",
+                category = "bery0zas-air-filtering-machine",
+                enabled = false,
 				energy_required = 20.0,
 				ingredients =
 				{
@@ -835,7 +836,8 @@ BRZ =
 			base_recipe = 
 			{
 				type = "recipe",
-				category = "bery0zas-air-filtering-machine",
+                category = "bery0zas-air-filtering-machine",
+                enabled = false,
 				energy_required = 20.0,
 				ingredients =
 				{
@@ -1146,7 +1148,8 @@ BRZ =
 			base_recipe = 
 			{
 				type = "recipe",
-				category = "bery0zas-air-filtering-machine",
+                category = "bery0zas-air-filtering-machine",
+                enabled = false,
 				energy_required = 20.0,
 				ingredients =
 				{
