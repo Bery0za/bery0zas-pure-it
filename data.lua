@@ -5,6 +5,7 @@ require("prototypes.fluid")
 require("prototypes.recipe")
 require("prototypes.technology")
 
+table.insert(data.raw["player"]["player"].crafting_categories, "bery0zas-air-filtering-machine")
 table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "bery0zas-air-filtering-machine")
 table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "bery0zas-air-filtering-item")
 table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories, "bery0zas-air-filtering-machine")
