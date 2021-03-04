@@ -1,18 +1,18 @@
-require("prototypes.const")
+angelsmods = angelsmods or {}
+angelsmods.functions = angelsmods.functions or {}
+
+bery0zas = bery0zas or {}
+bery0zas.functions = bery0zas.functions or {}
+bery0zas.data = bery0zas.data or {}
+
+require("prototypes.bery0zas-functions")
+
+require("prototypes.predefined")
 require("prototypes.entity")
 require("prototypes.item")
 require("prototypes.fluid")
 require("prototypes.recipe")
 require("prototypes.technology")
 
-table.insert(data.raw["character"]["character"].crafting_categories, "bery0zas-air-filtering-machine")
-table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "bery0zas-air-filtering-machine")
-table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "bery0zas-air-filtering-item")
-table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories, "bery0zas-air-filtering-machine")
-table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories, "bery0zas-air-filtering-item")
-table.insert(data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories, "bery0zas-air-filtering-machine")
-table.insert(data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories, "bery0zas-air-filtering-item")
-table.insert(data.raw["assembling-machine"]["chemical-plant"].crafting_categories, "bery0zas-air-filtering-chemistry")
-table.insert(data.raw["furnace"]["stone-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
-table.insert(data.raw["furnace"]["steel-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
-table.insert(data.raw["furnace"]["electric-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
+bery0zas.functions.register_recipe_categories()
+bery0zas.functions.add_crafting_categories()

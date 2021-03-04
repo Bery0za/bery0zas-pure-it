@@ -1,3 +1,66 @@
+local oxygen_extraction = {
+	type = "unlock-recipe",
+	recipe = "bery0zas-oxygen-extraction"
+}
+
+local sodium_hydroxide = {
+	type = "unlock-recipe",
+	recipe = "bery0zas-sodium-hydroxide"
+}
+
+local sodium_hydroxide_sparging = {
+	type = "unlock-recipe",
+	recipe = "bery0zas-sodium-hydroxide-sparging"
+}
+
+local oxygen_sparging = {
+	type = "unlock-recipe",
+	recipe = "bery0zas-oxygen-sparging"
+}
+
+local polluted_water_recycling = {
+	type = "unlock-recipe",
+	recipe = "bery0zas-polluted-water-recycling"
+}
+
+local iron_halite_extraction = {
+	type = "unlock-recipe",
+	recipe = "bery0zas-iron-halite-extraction"
+}
+
+local copper_halite_extraction = {
+	type = "unlock-recipe",
+	recipe = "bery0zas-copper-halite-extraction"
+}
+
+local solid_sodium_hydroxide = nil
+
+if mods["bobplates"] or mods["angelspetrochem"] then
+	oxygen_extraction = nil
+end
+
+if mods["angelsrefining"] then
+	iron_halite_extraction = nil
+	copper_halite_extraction = nil
+end
+
+if mods["angelspetrochem"] then
+	sodium_hydroxide = nil
+	sodium_hydroxide_sparging = {
+		type = "unlock-recipe",
+		recipe = "bery0zas-sodium-hydroxide-solution"
+	}
+	oxygen_sparging = {
+		type = "unlock-recipe",
+		recipe = "bery0zas-oxygen-solution"
+	}
+	polluted_water_recycling = nil
+	solid_sodium_hydroxide = {
+		type = "unlock-recipe",
+		recipe = "bery0zas-solid-sodium-hydroxide"
+	}
+end
+
 data:extend(
 {
 	{
@@ -41,10 +104,7 @@ data:extend(
 				type = "unlock-recipe",
 				recipe = "bery0zas-spray-surface-recycling"
 			},
-			{
-				type = "unlock-recipe",
-				recipe = "bery0zas-polluted-water-recycling"
-			},
+			polluted_water_recycling,
 			{
 				type = "unlock-recipe",
 				recipe = "bery0zas-coal-adsorption"
@@ -99,14 +159,8 @@ data:extend(
 				type = "unlock-recipe",
 				recipe = "bery0zas-adsorption-coil-mk1-with-activated-carbon"
 			},
-			{
-				type = "unlock-recipe",
-				recipe = "bery0zas-oxygen-extraction"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "bery0zas-oxygen-sparging"
-			},
+			oxygen_extraction,
+			oxygen_sparging,
 			{
 				type = "unlock-recipe",
 				recipe = "bery0zas-oxygen-sparged-water-absorption"
@@ -150,14 +204,8 @@ data:extend(
 				type = "unlock-recipe",
 				recipe = "bery0zas-air-absorber-3"
 			},
-			{
-				type = "unlock-recipe",
-				recipe = "bery0zas-iron-halite-extraction"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "bery0zas-copper-halite-extraction"
-			},
+			iron_halite_extraction,
+			copper_halite_extraction,
 			{
 				type = "unlock-recipe",
 				recipe = "bery0zas-adsorption-coil-mk2"
@@ -170,14 +218,9 @@ data:extend(
 				type = "unlock-recipe",
 				recipe = "bery0zas-adsorption-coil-mk2-with-cellular-carbon"
 			},
-			{
-				type = "unlock-recipe",
-				recipe = "bery0zas-sodium-hydroxide"
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "bery0zas-sodium-hydroxide-sparging"
-			},
+			sodium_hydroxide,
+			solid_sodium_hydroxide,
+			sodium_hydroxide_sparging,
 			{
 				type = "unlock-recipe",
 				recipe = "bery0zas-sodium-hydroxide-sparged-water-absorption"
