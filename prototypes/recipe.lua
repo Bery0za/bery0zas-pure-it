@@ -36,7 +36,7 @@ data:extend({
 		energy_required = 10,
 		category = "bery0zas-air-filtering-item",
 		enabled = false,
-		ingredients = {{"iron-plate", 3}, {"iron-stick", 8}},
+		ingredients = {{"iron-plate", 2}, {"iron-stick", 6}},
 		icon = "__bery0zas-pure-it__/graphics/icons/spray-surface.png",
 		icon_size = 32,
 		subgroup = "intermediate-product",
@@ -97,7 +97,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-spray-surface-recycling",
-		energy_required = 10,
+		energy_required = 7,
 		category = "bery0zas-air-filtering-burning",
 		enabled = false,
 		ingredients = {{"bery0zas-polluted-spray-surface", 1}},
@@ -115,13 +115,13 @@ data:extend({
 		enabled = false,
 		ingredients = 
 		{
-			{ type = "item", name = "coal", amount = 5 },
-			{ type = "fluid", name = "sulfuric-acid", amount = 10 }
+			{ type = "item", name = "coal", amount = 10 },
+			{ type = "fluid", name = "sulfuric-acid", amount = 20 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/activated-carbon.png",
 		icon_size = 32,
 		subgroup = "raw-resource",
-		results = {{ name = "bery0zas-activated-carbon", amount = 5 }}
+		results = {{ name = "bery0zas-activated-carbon", amount = 8 }}
 	},
 	{
 		type = "recipe",
@@ -131,13 +131,13 @@ data:extend({
 		enabled = false,
 		ingredients =
 		{
-			{ type = "item", name = "bery0zas-activated-carbon", amount = 5 },
-			{ type = "fluid", name = "petroleum-gas", amount = 10 }
+			{ type = "item", name = "bery0zas-activated-carbon", amount = 8 },
+			{ type = "fluid", name = "petroleum-gas", amount = 20 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/cellular-carbon.png",
 		icon_size = 32,
 		subgroup = "raw-resource",
-		results = {{ name = "bery0zas-cellular-carbon", amount = 5 }}
+		results = {{ name = "bery0zas-cellular-carbon", amount = 8 }}
 	},
 	{
 		type = "recipe",
@@ -155,7 +155,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-water-absorption",
-		energy_required = 20,
+		energy_required = 25,
 		category = "bery0zas-air-filtering-absorption",
 		enabled = false,
 		ingredients =
@@ -177,43 +177,43 @@ data:extend({
 		enabled = false,
 		ingredients =
 		{
-			{ type = "fluid", name = "bery0zas-oxygen-sparged-water", amount = 5, fluidbox_index = 1 },
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 5, fluidbox_index = 2 }
+			{ type = "fluid", name = "bery0zas-oxygen-sparged-water", amount = 4, fluidbox_index = 1 },
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 4, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/recipe/oxygen-sparged-water-absorption.png",
 		icon_size = 32,
 		subgroup = "terrain",
-		results = {{ type = "fluid", name = polluted_water, amount = 10 }},
+		results = {{ type = "fluid", name = polluted_water, amount = 8 }},
 		main_product = ""
 	},
 	{
 		type = "recipe",
 		name = "bery0zas-sodium-hydroxide-sparged-water-absorption",
-		energy_required = 20,
+		energy_required = 15,
 		category = "bery0zas-air-filtering-absorption",
 		enabled = false,
 		ingredients =
 		{
-			{ type = "fluid", name = liquid_sodium_hydroxide, amount = 10, fluidbox_index = 1 },
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 10, fluidbox_index = 2 }
+			{ type = "fluid", name = liquid_sodium_hydroxide, amount = 8, fluidbox_index = 1 },
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 8, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/recipe/sodium-hydroxide-sparged-water-absorption.png",
 		icon_size = 32,
 		subgroup = "terrain",
-		results = {{ type = "fluid", name = polluted_water, amount = 20 }},
+		results = {{ type = "fluid", name = polluted_water, amount = 16 }},
 		main_product = ""
 	},
 	{
 		type = "recipe",
 		name = "bery0zas-water-absorption-with-spraying",
-		energy_required = 10,
+		energy_required = 20,
 		category = "bery0zas-air-filtering-absorption",
 		enabled = false,
 		ingredients =
 		{
 			{ type = "fluid", name = "water", amount = 2, fluidbox_index = 1 },
 			{ type = "fluid", name = "bery0zas-polluted-air", amount = 2, fluidbox_index = 2 },
-			{ type = "item", name = "bery0zas-spray-surface", amount = 1 }
+			{ type = "item", name = "bery0zas-spray-surface", amount = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/recipe/water-absorption-with-spraying.png",
 		icon_size = 32,
@@ -221,7 +221,7 @@ data:extend({
 		results =
 		{
 			{ type = "fluid", name = polluted_water, amount = 4 },
-			{ type = "item", name = "bery0zas-polluted-spray-surface", amount = 1 }
+			{ type = "item", name = "bery0zas-polluted-spray-surface", amount = 2 }
 		}
 	},
 	{
@@ -232,16 +232,16 @@ data:extend({
 		enabled = false,
 		ingredients =
 		{
-			{ type = "fluid", name = "bery0zas-oxygen-sparged-water", amount = 5, fluidbox_index = 1},
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 5, fluidbox_index = 2 },
-			{ type = "item", name = "bery0zas-spray-surface", amount = 1 }
+			{ type = "fluid", name = "bery0zas-oxygen-sparged-water", amount = 4, fluidbox_index = 1},
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 4, fluidbox_index = 2 },
+			{ type = "item", name = "bery0zas-spray-surface", amount = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/recipe/oxygen-sparged-water-absorption-with-spraying.png",
 		icon_size = 32,
 		subgroup = "terrain",
 		results =
 		{
-			{ type = "fluid", name = polluted_water, amount = 10 },
+			{ type = "fluid", name = polluted_water, amount = 8 },
 			{ type = "item", name = "bery0zas-polluted-spray-surface", amount = 1 }
 		}
 	},
@@ -253,8 +253,8 @@ data:extend({
 		enabled = false,
 		ingredients =
 		{
-			{ type = "fluid", name = liquid_sodium_hydroxide, amount = 10, fluidbox_index = 1 },
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 10, fluidbox_index = 2 },
+			{ type = "fluid", name = liquid_sodium_hydroxide, amount = 8, fluidbox_index = 1 },
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 8, fluidbox_index = 2 },
 			{ type = "item", name = "bery0zas-spray-surface", amount = 1 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/recipe/sodium-hydroxide-sparged-water-absorption-with-spraying.png",
@@ -262,19 +262,19 @@ data:extend({
 		subgroup = "terrain",
 		results =
 		{
-			{ type = "fluid", name = polluted_water, amount = 20 },
+			{ type = "fluid", name = polluted_water, amount = 16 },
 			{ type = "item", name = "bery0zas-polluted-spray-surface", amount = 1 }
 		}
 	},
 	{
 		type = "recipe",
 		name = "bery0zas-coal-adsorption",
-		energy_required = 10,
+		energy_required = 25,
 		category = "bery0zas-air-filtering-adsorption",
 		enabled = false,
 		ingredients =
 		{
-			{ type = "item", name = "coal", amount = 10 },
+			{ type = "item", name = "coal", amount = 1 },
 			{ type = "fluid", name = "bery0zas-polluted-air", amount = 2, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/coal.png",
@@ -285,13 +285,13 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-coal-adsorption-with-steam",
-		energy_required = 10,
+		energy_required = 20,
 		category = "bery0zas-air-filtering-adsorption",
 		enabled = false,
 		ingredients =
 		{
-			{ type = "item", name = "coal", amount = 5 },
-			{ type = "fluid", name = "steam", amount = 5, fluidbox_index = 1 },
+			{ type = "item", name = "coal", amount = 2 },
+			{ type = "fluid", name = "steam", amount = 2, fluidbox_index = 1 },
 			{ type = "fluid", name = "bery0zas-polluted-air", amount = 2, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/fluid/steam.png",
@@ -302,38 +302,38 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-activated-carbon-adsorption",
-		energy_required = 10,
+		energy_required = 12,
 		category = "bery0zas-air-filtering-adsorption",
 		enabled = false,
 		ingredients =
 		{
-			{ type = "item", name = "bery0zas-adsorption-coil-mk1-with-activated-carbon", amount = 5 },
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 2, fluidbox_index = 2 }
+			{ type = "item", name = "bery0zas-adsorption-coil-mk1-with-activated-carbon", amount = 1 },
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 5, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/adsorption-coil-mk1-with-activated-carbon.png",
 		icon_size = 32,
 		subgroup = "terrain",
 		results =
 		{
-			{ type = "item", name = "bery0zas-adsorption-coil-mk1", amount = 5 }
+			{ type = "item", name = "bery0zas-adsorption-coil-mk1", amount = 1 }
 		},
 		main_product = ""
 	},
 	{
 		type = "recipe",
 		name = "bery0zas-cellular-carbon-adsorption",
-		energy_required = 10,
+		energy_required = 8,
 		category = "bery0zas-air-filtering-adsorption",
 		enabled = false,
 		ingredients =
 		{
-			{ type = "item", name = "bery0zas-adsorption-coil-mk2-with-cellular-carbon", amount = 2 },
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 2, fluidbox_index = 2 }
+			{ type = "item", name = "bery0zas-adsorption-coil-mk2-with-cellular-carbon", amount = 1 },
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 5, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/adsorption-coil-mk2-with-cellular-carbon.png",
 		icon_size = 32,
 		subgroup = "terrain",
-		results = {{ type = "item", name = "bery0zas-adsorption-coil-mk2", amount = 2 }},
+		results = {{ type = "item", name = "bery0zas-adsorption-coil-mk2", amount = 1 }},
 		main_product = ""
 	}
 })
@@ -350,7 +350,7 @@ if not (mods["bobplates"] or mods["angelspetrochem"]) then
 			icon = "__bery0zas-pure-it__/graphics/icons/fluid/oxygen.png",
 			icon_size = 32,
 			subgroup = "fluid-recipes",
-			results = {{ type = "fluid", name = "bery0zas-oxygen", amount = 10 }},
+			results = {{ type = "fluid", name = "bery0zas-oxygen", amount = 2 }},
 			main_product = ""
 		}
 	})
@@ -404,7 +404,7 @@ if not mods["angelspetrochem"] then
 			ingredients =
 			{
 				{ type = "fluid", name = "water", amount = 10 },
-				{ type = "item", name = "bery0zas-halite", amount = 5 }
+				{ type = "item", name = "bery0zas-halite", amount = 3 }
 			},
 			icon = "__bery0zas-pure-it__/graphics/icons/fluid/sodium-hydroxide.png",
 			icon_size = 32,
@@ -413,7 +413,7 @@ if not mods["angelspetrochem"] then
 				{
 					type = "fluid",
 					name = "bery0zas-sodium-hydroxide",
-					amount = 15
+					amount = 13
 				}
 			},
 			main_product = ""
@@ -489,52 +489,51 @@ else
 		{
 			type = "recipe",
 			name = "bery0zas-oxygen-solution",
-			energy_required = 20,
-			category = "bery0zas-air-filtering-sparging",
+			energy_required = 10,
+			category = "liquifying",
 			enabled = false,
 			ingredients =
 			{
-				{ type = "fluid", name = "water-purified", amount = 10 },
-				{ type = "fluid", name = oxygen, amount = 10 }
+				{ type = "fluid", name = "water-purified", amount = 25 },
+				{ type = "fluid", name = oxygen, amount = 25 }
 			},
 			icons = angelsmods.functions.create_liquid_recipe_icon(nil, {{249, 013, 013}, {094, 114, 174}, {088, 101, 155}}),
-			subgroup = "fluid-recipes",
-			results = {{ type = "fluid", name = "bery0zas-oxygen-sparged-water", amount = 20 }},
+			subgroup = "liquifying",
+			results = {{ type = "fluid", name = "bery0zas-oxygen-sparged-water", amount = 50 }},
 			main_product = ""
 		},
 		{
 			type = "recipe",
 			name = "bery0zas-sodium-hydroxide-solution",
-			energy_required = 20,
-			category = "bery0zas-air-filtering-sparging",
+			energy_required = 10,
+			category = "liquifying",
 			enabled = false,
 			ingredients =
 			{
-				{ type = "fluid", name = "water-purified", amount = 10 },
-				{ name = sodium_hydroxide, amount = 10 }
+				{ type = "fluid", name = "water-purified", amount = 50 },
+				{ name = sodium_hydroxide, amount = 1 }
 			},
 			icons = angelsmods.functions.create_liquid_recipe_icon(nil, {{151, 212, 255}, {255, 255, 255}, {255, 255, 255}}),
-			subgroup = "fluid-recipes",
-			results = {{ type = "fluid", name = liquid_sodium_hydroxide, amount = 20 }},
+			subgroup = "petrochem-sodium",
+			results = {{ type = "fluid", name = liquid_sodium_hydroxide, amount = 50 }},
+			order = "e[liquid-sodium-hydroxide]-b[hydroxide]",
 			main_product = ""
 		},
 		{
 			type = "recipe",
 			name = "bery0zas-solid-sodium-hydroxide",
+			energy_required = 10,
 			category = "liquifying",
-			subgroup = "petrochem-sodium",
-			energy_required = 2,
 			enabled = false,
 			ingredients = {
 				{ type = "item", name = "bery0zas-halite", amount = 5 },
 				{ type = "fluid", name = "water-purified", amount = 50 }
 			},
-			results = {
-				{ type = "item", name = "solid-sodium-hydroxide", amount = 5 }
-			},
-			main_product = "solid-sodium-hydroxide",
 			icon_size = 32,
-			order = "c[sodium-hydroxide]-a[generation]"
+			subgroup = "petrochem-sodium",
+			results = {{ type = "item", name = "solid-sodium-hydroxide", amount = 5 }},
+			order = "c[sodium-hydroxide]-a[generation]",
+			main_product = "solid-sodium-hydroxide"
 		  },
 	})
 end

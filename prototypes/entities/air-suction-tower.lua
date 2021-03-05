@@ -368,7 +368,7 @@ bery0zas.pure_it.entities.air_suction_tower =
 	
 	has_tint = true,
 	
-	crafting_speed_multiplier = 0.5,
+	crafting_speed_multiplier = 0.25,
 	
 	energy_usage = 100,
 	energy_units = "kW",

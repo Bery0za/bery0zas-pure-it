@@ -1,10 +1,10 @@
 bery0zas.common.crafting_speeds =
 {
-	0.5,
-	0.75,
 	1,
-	1.5,
-	2
+	2,
+	4,
+	6,
+	8
 }
 
 bery0zas.common.level_tint =

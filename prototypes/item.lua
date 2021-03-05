@@ -14,8 +14,9 @@ data:extend(
 		name = "bery0zas-halite",
 		icon = "__bery0zas-pure-it__/graphics/icons/halite.png",
 		icon_size = 32,
-		subgroup = "intermediate-product",
-		stack_size = 100
+		subgroup = "raw-resource",
+		stack_size = 100,
+		order = "h[halite]"
 	},
 	{
 		type = "item",
