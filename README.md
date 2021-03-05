@@ -12,14 +12,21 @@ Control script of this mod is based on [Better Air Filtering](https://mods.facto
 Operational radii of air sucking machines are *8, 16, and 24* tiles for *Mk1, Mk2, Mk3* respectively. Those tiles are divided between chunks depending on the sucker position, leaving every chunk only some fraction of total machine capacity.
 
 ## Roadmap
-- [ ] Balancing
-- [ ] New recipe chains (Calcium hydroxide)
+- [x] Balancing
+- [ ] New recipe chains
+  - [ ] Calcium hydroxide
 - [ ] Animation, sprites and icons tweaks (tint!)
 - [ ] Integration with other mods
+  - [x] Bob's Plates
+  - [x] Angel's Refining
+  - [x] Angel's Petrochemical Processing   
 - [ ] Localization
+  - [x] English
+  - [x] Russian
+- [ ] Performance **◄ I am here!**
 
 ## Bugs and suggestions
 This mod is in it's early stages of development and has not yet been extensively tested and balanced. So, I greatly appreciate any impressions sharing, bug reports, rebalancing suggestions, new feature requests. Let's play 'Pure It' and make it better! Enjoy, test and all that stuff.
 
 ## Post Scriptum
-Sorry for my poor English, my native language is Russian. Feel free to suggest me any corrections in the description or mod localization.
+Sorry for my poor English, my native language is Russian. Feel free to suggest me any corrections in the description or mod localization. Oh, and you can also support me via [PayPal](https://paypal.me/bery0za) if you're tempted to do that.
