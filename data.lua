@@ -4,7 +4,7 @@ bery0zas.common = bery0zas.common or {}
 require("prototypes.common")
 
 bery0zas.functions = bery0zas.functions or {}
-require("prototypes.bery0zas-functions")
+require("prototypes.functions")
 
 bery0zas.pure_it = {}
 require("prototypes.pure-it")
