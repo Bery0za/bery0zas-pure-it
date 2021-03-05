@@ -63,35 +63,21 @@ function bery0zas.functions.pipe_pictures()
 	}
 end
 
-function bery0zas.functions.register_recipe_categories()
-	for _, category in pairs(bery0zas.predefined.recipe_categories) do
+function bery0zas.functions.register_recipe_categories(categories)
+	for _, category in pairs(categories) do
 		local recipe_category = { type = "recipe-category", name = category }
 		data:extend({ recipe_category })
 	end
-end
-
-function bery0zas.functions.add_crafting_categories()
-	table.insert(data.raw["character"]["character"].crafting_categories, "bery0zas-air-filtering-machine")
-	table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "bery0zas-air-filtering-machine")
-	table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "bery0zas-air-filtering-item")
-	table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories, "bery0zas-air-filtering-machine")
-	table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories, "bery0zas-air-filtering-item")
-	table.insert(data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories, "bery0zas-air-filtering-machine")
-	table.insert(data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories, "bery0zas-air-filtering-item")
-	table.insert(data.raw["assembling-machine"]["chemical-plant"].crafting_categories, "bery0zas-air-filtering-chemistry")
-	table.insert(data.raw["furnace"]["stone-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
-	table.insert(data.raw["furnace"]["steel-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
-	table.insert(data.raw["furnace"]["electric-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
 end
 
 function bery0zas.functions.register_entity(template, num_tiers)
 	for i = 1, num_tiers, 1 do
 		local proto = util.table.deepcopy(template.entity)
 		local name = template.base_name
-		local color_tint = bery0zas.predefined.level_tint[i]
+		local color_tint = bery0zas.common.level_tint[i]
 		
 		proto.name = name .. "-" .. i
-		proto.crafting_speed = bery0zas.predefined.crafting_speeds[i] * template.crafting_speed_multiplier
+		proto.crafting_speed = bery0zas.common.crafting_speeds[i] * template.crafting_speed_multiplier
 		proto.minable = { mining_time = proto.crafting_speed, result = proto.name }
 		
 		if (num_tiers > 1 and i < num_tiers) then
@@ -133,14 +119,4 @@ function bery0zas.functions.register_entity(template, num_tiers)
 		
 		data:extend({ proto, item, recipe })
 	end
-end
-
-function bery0zas.functions.angels_halite_recipe(ore_number)
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-crushed-processing"].normal.results, { name = "bery0zas-halite", probability = 0.025, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-chunk-processing"].normal.results, { name = "bery0zas-halite", probability = 0.05, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-chunk-processing"].expensive.results, { name = "bery0zas-halite", probability = 0.025, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-crystal-processing"].normal.results, { name = "bery0zas-halite", probability = 0.1, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-crystal-processing"].expensive.results, { name = "bery0zas-halite", probability = 0.05, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-pure-processing"].normal.results, { name = "bery0zas-halite", probability = 0.2, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-pure-processing"].expensive.results, { name = "bery0zas-halite", probability = 0.1, amount = 1 })
 end

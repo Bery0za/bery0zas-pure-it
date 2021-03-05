@@ -3,12 +3,15 @@ local sodium_hydroxide = "bery0zas-sodium-hydroxide"
 local liquid_sodium_hydroxide = "bery0zas-sodium-hydroxide"
 local polluted_water = "bery0zas-polluted-water"
 
-if mods["bobplates"] or mods["angelspetrochem"] then oxygen = "oxygen" end
+if mods["bobplates"] then
+	oxygen = "oxygen"
+end
 
 if mods["angelspetrochem"] then
 	sodium_hydroxide = "solid-sodium-hydroxide"
 	liquid_sodium_hydroxide = "liquid-aqueous-sodium-hydroxide"
 	polluted_water = "water-mineralized"
+	oxygen = "gas-oxygen"
 end
 
 data:extend({

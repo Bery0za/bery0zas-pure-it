@@ -1,4 +1,4 @@
-bery0zas.entities.air_suction_tower = 
+bery0zas.pure_it.entities.air_suction_tower = 
 {
 	base_name = "bery0zas-air-suction-tower",
 	

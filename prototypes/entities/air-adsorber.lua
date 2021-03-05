@@ -1,4 +1,4 @@
-bery0zas.entities.air_adsorber = 
+bery0zas.pure_it.entities.air_adsorber = 
 {
 	base_name = "bery0zas-air-adsorber",
 	
