@@ -1,0 +1,24 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0 (The whole new life update)
+Date: 6.03.2021
+  Info:
+    - Sorry, folks, for this long time waiting, but there have been big changes in my life. I met my soul mate, changed my jobs drastically and moved to another city in another region of Russia. Maybe these things don't sound like something special, but for the whole three months I have been feeling myself in a big mess. And I'm glad to return.
+  Changes:
+    - Updated to Factorio 1.1
+    - Renewed roadmap
+  Major Features:
+    - Added integration with Bob's Metals, Chemicals and Intermediates
+    - Added integration with Angel's Refining
+    - Added integration with Angel's Petrochemical Processing
+  Features:
+    - Options to enable/disable mod integration
+  Optimisations:
+    - Renewed file structure
+    - Renewed prototype stage
+  Balancing:
+    - Rebalanced vanilla recipes for absorption
+    - Rebalanced vanilla recipes for adsorption
+    - Rebalanced vanilla recipes for intermediate products
+    - Rebalanced recipes for integrated state
+  Locale:
+    - Various fixes in localization files
