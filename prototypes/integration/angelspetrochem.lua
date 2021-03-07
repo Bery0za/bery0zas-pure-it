@@ -10,7 +10,9 @@ end
 
 bery0zas.functions.alter_recipe("bery0zas-water-absorption", "results", "name", "bery0zas-polluted-water", "name", "water-mineralized")
 bery0zas.functions.alter_recipe("bery0zas-water-absorption-with-spraying", "results", "name", "bery0zas-polluted-water", "name", "water-mineralized")
+bery0zas.functions.alter_recipe("bery0zas-oxygen-sparged-water-absorption", "ingredients", "name", "bery0zas-oxygen-sparged-water", "name", "bery0zas-oxygen-solution")
 bery0zas.functions.alter_recipe("bery0zas-oxygen-sparged-water-absorption", "results", "name", "bery0zas-polluted-water", "name", "water-mineralized")
+bery0zas.functions.alter_recipe("bery0zas-oxygen-sparged-water-absorption-with-spraying", "ingredients", "name", "bery0zas-oxygen-sparged-water", "name", "bery0zas-oxygen-solution")
 bery0zas.functions.alter_recipe("bery0zas-oxygen-sparged-water-absorption-with-spraying", "results", "name", "bery0zas-polluted-water", "name", "water-mineralized")
 bery0zas.functions.alter_recipe("bery0zas-sodium-hydroxide-sparged-water-absorption", "ingredients", "name", "bery0zas-sodium-hydroxide-sparged-water", "name", "liquid-aqueous-sodium-hydroxide")
 bery0zas.functions.alter_recipe("bery0zas-sodium-hydroxide-sparged-water-absorption", "results", "name", "bery0zas-polluted-water", "name", "water-mineralized")
@@ -42,7 +44,7 @@ bery0zas.functions.remove_fluid("bery0zas-sodium-hydroxide-sparged-water")
 data:extend({
 	{
 		type = "fluid",
-		name = "bery0zas-oxygen-sparged-water",
+		name = "bery0zas-oxygen-solution",
 		default_temperature = 15,
 		max_temperature = 100,
 		base_color = { r = 0.62, g = 0.7, b = 0.95 },
@@ -67,7 +69,7 @@ data:extend({
 		},
 		icons = angelsmods.functions.create_liquid_recipe_icon(nil, {{249, 013, 013}, {094, 114, 174}, {088, 101, 155}}),
 		subgroup = "liquifying",
-		results = {{ type = "fluid", name = "bery0zas-oxygen-sparged-water", amount = 20 }},
+		results = {{ type = "fluid", name = "bery0zas-oxygen-solution", amount = 20 }},
 		order = "l[oxygen-solution]-a[generation]",
 		main_product = ""
 	},
