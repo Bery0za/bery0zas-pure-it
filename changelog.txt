@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.0 (The whole new life update)
-Date: 6.03.2021
+Date: 7.03.2021
   Info:
     - Sorry, folks, for this long time waiting, but there have been big changes in my life. I met my soul mate, changed my jobs drastically and moved to another city in another region of Russia. Maybe these things don't sound like something special, but for the whole three months I have been feeling myself in a big mess. And I'm glad to return.
   Changes:
@@ -23,3 +23,8 @@ Date: 6.03.2021
     - Angel's air filter doesn't remove pollution
   Locale:
     - Various fixes in localization files
+---------------------------------------------------------------------------------------------------
+Version: 0.2.4 (The game has changed update)
+Date: 7.03.2021
+  Info:
+    - Just an update for those who want to play the original mod with Factorio 1.1
