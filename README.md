@@ -37,4 +37,4 @@ Operational radii of air sucking machines are *8, 16, and 24* tiles for *Mk1, Mk
 This mod is in it's early stages of development and has not yet been extensively tested and balanced. So, I greatly appreciate any impressions sharing, bug reports, rebalancing suggestions, new feature requests. Let's play 'Pure It' and make it better! Enjoy, test and all that stuff.
 
 ## Post Scriptum
-Sorry for my poor English, my native language is Russian. Feel free to suggest me any corrections in the description or mod localization. Oh, and you can also support me via [PayPal](https://paypal.me/bery0za) if you like what I do.
+Feel free to suggest me any corrections in the description or mod localization. Oh, and you can also support me via [PayPal](https://paypal.me/bery0za) if you like what I do.
