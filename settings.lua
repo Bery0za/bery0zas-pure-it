@@ -27,13 +27,19 @@ if mods['bobplates'] then
 	})
 end
 
-if mods['angelsrefining'] or mods['angelspetrochem'] then
+if mods['angelspetrochem'] then
 	data:extend({
 		{
 			type = "bool-setting",
-			name = "bery0zas-pure-it-integrate-angels",
+			name = "bery0zas-pure-it-integrate-angelspetrochem",
 			setting_type = "startup",
 			default_value = true,
+		},
+		{
+			type = "bool-setting",
+			name = "bery0zas-pure-it-leave-halite",
+			setting_type = "startup",
+			default_value = false,
 		}
 	})
 end

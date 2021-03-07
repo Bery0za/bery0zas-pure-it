@@ -1,3 +1,5 @@
+bery0zas.pure_it = {}
+
 bery0zas.pure_it.recipe_categories = 
 {
 	"bery0zas-air-filtering-machine",
@@ -9,6 +11,11 @@ bery0zas.pure_it.recipe_categories =
 	"bery0zas-air-filtering-adsorption",
 	"bery0zas-air-filtering-burning"
 }
+
+bery0zas.pure_it.triggers = {}
+bery0zas.pure_it.triggers["integrate-bobplates"] = mods["bobplates"] and settings.startup["bery0zas-pure-it-integrate-bobs"].value
+bery0zas.pure_it.triggers["integrate-angelspetrochem"] = mods["angelspetrochem"] and settings.startup["bery0zas-pure-it-integrate-angelspetrochem"].value
+bery0zas.pure_it.triggers["leave-halite"] = not (mods["angelspetrochem"] and settings.startup["bery0zas-pure-it-integrate-angelspetrochem"].value) or settings.startup["bery0zas-pure-it-leave-halite"].value
 
 function bery0zas.pure_it.add_crafting_categories()
 	table.insert(data.raw["character"]["character"].crafting_categories, "bery0zas-air-filtering-machine")
@@ -22,14 +29,4 @@ function bery0zas.pure_it.add_crafting_categories()
 	table.insert(data.raw["furnace"]["stone-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
 	table.insert(data.raw["furnace"]["steel-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
 	table.insert(data.raw["furnace"]["electric-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
-end
-
-function bery0zas.pure_it.angels_halite_recipe(ore_number)
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-crushed-processing"].normal.results, { name = "bery0zas-halite", probability = 0.05, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-chunk-processing"].normal.results, { name = "bery0zas-halite", probability = 0.1, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-chunk-processing"].expensive.results, { name = "bery0zas-halite", probability = 0.05, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-crystal-processing"].normal.results, { name = "bery0zas-halite", probability = 0.2, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-crystal-processing"].expensive.results, { name = "bery0zas-halite", probability = 0.1, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-pure-processing"].normal.results, { name = "bery0zas-halite", probability = 0.4, amount = 1 })
-	table.insert(data.raw.recipe["angelsore" .. ore_number .. "-pure-processing"].expensive.results, { name = "bery0zas-halite", probability = 0.2, amount = 1 })
 end

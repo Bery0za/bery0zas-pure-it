@@ -120,3 +120,51 @@ function bery0zas.functions.register_entity(template, num_tiers)
 		data:extend({ proto, item, recipe })
 	end
 end
+
+function bery0zas.functions.remove_item(item_name)
+	for key, value in pairs(data.raw.item) do
+		if key == item_name then data.raw.item[key] = nil end
+	end
+end
+
+function bery0zas.functions.remove_fluid(fluid_name)
+	for key, value in pairs(data.raw.fluid) do
+		if key == fluid_name then data.raw.fluid[key] = nil end
+	end
+end
+
+function bery0zas.functions.remove_recipe(recipe_name)
+	for key, value in pairs(data.raw.recipe) do
+		if key == recipe_name then data.raw.recipe[key] = nil end
+	end
+end
+
+function bery0zas.functions.alter_recipe(recipe_name, field, sub_field, sub_field_value, target_sub_field, target_value)
+	for i, fields in ipairs(data.raw.recipe[recipe_name][field]) do
+		for f, sub in pairs(fields) do
+			if f == sub_field and sub == sub_field_value then
+				fields[target_sub_field] = target_value
+			end
+		end
+	end
+end
+
+function bery0zas.functions.add_technology_recipe(technology, recipe_name)
+	table.insert(data.raw.technology[technology].effects, {
+		type = "unlock-recipe",
+		recipe = recipe_name
+	})
+end
+
+function bery0zas.functions.remove_technology_recipe(technology, recipe_name)
+	local index = 1
+	local size = #data.raw.technology[technology].effects
+	while index <= size do
+		if data.raw.technology[technology].effects[index].recipe == recipe_name then
+			data.raw.technology[technology].effects[index] = data.raw.technology[technology].effects[size]
+			data.raw.technology[technology].effects[size] = nil
+			size = size - 1
+		else index = index + 1
+		end
+	end
+end
