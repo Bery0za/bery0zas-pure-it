@@ -96,22 +96,6 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "bery0zas-solid-sodium-hydroxide",
-		energy_required = 10,
-		category = "liquifying",
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "bery0zas-halite", amount = 5 },
-			{ type = "fluid", name = "water-purified", amount = 50 }
-		},
-		icon_size = 32,
-		subgroup = "petrochem-sodium",
-		results = {{ type = "item", name = "solid-sodium-hydroxide", amount = 5 }},
-		order = "c[sodium-hydroxide]-a[generation]",
-		main_product = "solid-sodium-hydroxide"
-	},
-	{
-		type = "recipe",
 		name = "bery0zas-sodium-hydroxide-solution",
 		energy_required = 10,
 		category = "bery0zas-air-filtering-sparging",
@@ -178,11 +162,3 @@ bery0zas.functions.add_technology_recipe("bery0zas-air-purification-3", "bery0za
 if bery0zas.pure_it.triggers["leave-halite"] then
 	bery0zas.functions.add_technology_recipe("bery0zas-air-purification-3", "bery0zas-solid-sodium-hydroxide")
 end
-
---CRAFTING_CATEGORIES
-table.insert(data.raw["assembling-machine"]["angels-chemical-plant"].crafting_categories, "bery0zas-air-filtering-chemistry")
-table.insert(data.raw["assembling-machine"]["angels-chemical-plant-2"].crafting_categories, "bery0zas-air-filtering-chemistry")
-table.insert(data.raw["assembling-machine"]["angels-chemical-plant-3"].crafting_categories, "bery0zas-air-filtering-chemistry")
-table.insert(data.raw["assembling-machine"]["angels-chemical-plant-4"].crafting_categories, "bery0zas-air-filtering-chemistry")
-table.insert(data.raw["assembling-machine"]["advanced-chemical-plant"].crafting_categories, "bery0zas-air-filtering-chemistry")
-table.insert(data.raw["assembling-machine"]["advanced-chemical-plant-2"].crafting_categories, "bery0zas-air-filtering-chemistry")

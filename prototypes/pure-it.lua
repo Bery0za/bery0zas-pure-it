@@ -29,4 +29,13 @@ function bery0zas.pure_it.add_crafting_categories()
 	table.insert(data.raw["furnace"]["stone-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
 	table.insert(data.raw["furnace"]["steel-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
 	table.insert(data.raw["furnace"]["electric-furnace"].crafting_categories, "bery0zas-air-filtering-burning")
+
+	if mods["angelspetrochem"] then
+		table.insert(data.raw["assembling-machine"]["angels-chemical-plant"].crafting_categories, "bery0zas-air-filtering-chemistry")
+		table.insert(data.raw["assembling-machine"]["angels-chemical-plant-2"].crafting_categories, "bery0zas-air-filtering-chemistry")
+		table.insert(data.raw["assembling-machine"]["angels-chemical-plant-3"].crafting_categories, "bery0zas-air-filtering-chemistry")
+		table.insert(data.raw["assembling-machine"]["angels-chemical-plant-4"].crafting_categories, "bery0zas-air-filtering-chemistry")
+		table.insert(data.raw["assembling-machine"]["advanced-chemical-plant"].crafting_categories, "bery0zas-air-filtering-chemistry")
+		table.insert(data.raw["assembling-machine"]["advanced-chemical-plant-2"].crafting_categories, "bery0zas-air-filtering-chemistry")
+	end
 end
