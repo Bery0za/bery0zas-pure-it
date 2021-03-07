@@ -27,4 +27,4 @@ Date: 7.03.2021
 Version: 0.2.4 (The game has changed update)
 Date: 7.03.2021
   Info:
-    - Just an update for those who want to play the original mod with Factorio 1.1
+    - Just an update for those who wants to play the original mod with Factorio 1.1
