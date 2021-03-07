@@ -403,7 +403,7 @@ data:extend({
 		icon = "__bery0zas-pure-it__/graphics/icons/coal.png",
 		icon_size = 32,
 		subgroup = "terrain",
-		results = {{ type = "item", name = "bery0zas-polluted-spray-surface", amount = 1 }}
+		results = {}
 	},
 	{
 		type = "recipe",
@@ -420,7 +420,7 @@ data:extend({
 		icon = "__bery0zas-pure-it__/graphics/icons/fluid/steam.png",
 		icon_size = 32,
 		subgroup = "terrain",
-		results = {{ type = "item", name = "bery0zas-polluted-spray-surface", amount = 1 }}
+		results = {}
 	},
 	{
 		type = "recipe",
