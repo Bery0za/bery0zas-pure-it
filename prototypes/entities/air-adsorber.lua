@@ -275,7 +275,7 @@ bery0zas.pure_it.entities.air_adsorber =
 	
 	crafting_speed_multiplier = 1,
 	
-	energy_usage = 100,
+	energy_usage = 300,
 	energy_units = "kW",
 	
 	item = 

@@ -76,7 +76,10 @@ data:extend({
 		energy_required = 10,
 		category = "bery0zas-air-filtering-item",
 		enabled = false,
-		ingredients = {{"steel-plate", 3}, {"iron-stick", 8}},
+		ingredients = {
+			{"steel-plate", 3},
+			{"iron-stick", 8}
+		},
 		icon = "__bery0zas-pure-it__/graphics/icons/adsorption-coil-mk2.png",
 		icon_size = 32,
 		subgroup = "intermediate-product",
@@ -85,13 +88,13 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-adsorption-coil-mk1-with-activated-carbon",
-		energy_required = 5,
+		energy_required = 3,
 		category = "bery0zas-air-filtering-item",
 		enabled = false,
 		ingredients =
 		{
-			{"bery0zas-adsorption-coil-mk1", 1},
-			{"bery0zas-activated-carbon", 3}
+			{ name = "bery0zas-adsorption-coil-mk1", amount = 1},
+			{ name = "bery0zas-activated-carbon", amount = 1 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/adsorption-coil-mk1-with-activated-carbon.png",
 		icon_size = 32,
@@ -101,10 +104,13 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-adsorption-coil-mk2-with-cellular-carbon",
-		energy_required = 5,
+		energy_required = 6,
 		category = "bery0zas-air-filtering-item",
 		enabled = false,
-		ingredients = {{"bery0zas-adsorption-coil-mk2", 1}, {"bery0zas-cellular-carbon", 3}},
+		ingredients = {
+			{ name = "bery0zas-adsorption-coil-mk2", amount = 1 },
+			{ name = "bery0zas-cellular-carbon", amount = 1 }
+		},
 		icon = "__bery0zas-pure-it__/graphics/icons/adsorption-coil-mk2-with-cellular-carbon.png",
 		icon_size = 32,
 		subgroup = "intermediate-product",
@@ -147,7 +153,7 @@ data:extend({
 		enabled = false,
 		ingredients =
 		{
-			{ type = "item", name = "bery0zas-activated-carbon", amount = 8 },
+			{ type = "item", name = "bery0zas-activated-carbon", amount = 10 },
 			{ type = "fluid", name = "petroleum-gas", amount = 20 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/cellular-carbon.png",
@@ -171,7 +177,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-water-absorption",
-		energy_required = 25,
+		energy_required = 30,
 		category = "bery0zas-air-filtering-absorption",
 		enabled = false,
 		ingredients =
@@ -246,7 +252,7 @@ data:extend({
 		enabled = false,
 		ingredients =
 		{
-			{ type = "fluid", name = "bery0zas-sodium-hydroxide-sparged-water", amount = 8, fluidbox_index = 1 },
+			{ type = "fluid", name = "bery0zas-sodium-hydroxide-sparged-water", amount = 12, fluidbox_index = 1 },
 			{ type = "fluid", name = "bery0zas-polluted-air", amount = 8, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/recipe/sodium-hydroxide-sparged-water-absorption.png",
@@ -279,7 +285,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-oxygen-sparged-water-absorption-with-spraying",
-		energy_required = 10,
+		energy_required = 15,
 		category = "bery0zas-air-filtering-absorption",
 		enabled = false,
 		ingredients =
@@ -386,13 +392,13 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-coal-adsorption",
-		energy_required = 25,
+		energy_required = 40,
 		category = "bery0zas-air-filtering-adsorption",
 		enabled = false,
 		ingredients =
 		{
 			{ type = "item", name = "coal", amount = 1 },
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 2, fluidbox_index = 2 }
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 3, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/coal.png",
 		icon_size = 32,
@@ -402,14 +408,14 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-coal-adsorption-with-steam",
-		energy_required = 20,
+		energy_required = 40,
 		category = "bery0zas-air-filtering-adsorption",
 		enabled = false,
 		ingredients =
 		{
 			{ type = "item", name = "coal", amount = 2 },
-			{ type = "fluid", name = "steam", amount = 2, fluidbox_index = 1 },
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 2, fluidbox_index = 2 }
+			{ type = "fluid", name = "steam", amount = 3, fluidbox_index = 1 },
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 5, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/fluid/steam.png",
 		icon_size = 32,
@@ -419,13 +425,13 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-activated-carbon-adsorption",
-		energy_required = 12,
+		energy_required = 40,
 		category = "bery0zas-air-filtering-adsorption",
 		enabled = false,
 		ingredients =
 		{
 			{ type = "item", name = "bery0zas-adsorption-coil-mk1-with-activated-carbon", amount = 1 },
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 5, fluidbox_index = 2 }
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 8, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/adsorption-coil-mk1-with-activated-carbon.png",
 		icon_size = 32,
@@ -439,13 +445,13 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-cellular-carbon-adsorption",
-		energy_required = 8,
+		energy_required = 40,
 		category = "bery0zas-air-filtering-adsorption",
 		enabled = false,
 		ingredients =
 		{
 			{ type = "item", name = "bery0zas-adsorption-coil-mk2-with-cellular-carbon", amount = 1 },
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 5, fluidbox_index = 2 }
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 12, fluidbox_index = 2 }
 		},
 		icon = "__bery0zas-pure-it__/graphics/icons/adsorption-coil-mk2-with-cellular-carbon.png",
 		icon_size = 32,
