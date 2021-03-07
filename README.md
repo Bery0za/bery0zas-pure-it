@@ -15,11 +15,12 @@ Operational radii of air sucking machines are *8, 16, and 24* tiles for *Mk1, Mk
 - Balancing
   - [x] Vanilla
   - [x] Mod-integrated
+  - [ ] Hard mode
 - New recipe chains
   - [ ] Calcium hydroxide
 - New entities
   - [ ] Long term storaging scheme (with the possibility of the big bada boom)
-  - [ ] Mod-related resource extracting machine(s)
+  - [ ] Mod-related resource transformation machine(s)
 - Animation, sprites and icons tweaks (tint!)
 - Integration with other mods
   - [x] Bob's Metals, Chemicals and Intermediates
