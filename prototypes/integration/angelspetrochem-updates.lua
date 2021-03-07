@@ -21,3 +21,5 @@ if bery0zas.pure_it.triggers["leave-halite"] then
 	bery0zas.pure_it.integration.angelspetrochem.halite_recipe(3)
 	bery0zas.pure_it.integration.angelspetrochem.halite_recipe(4)
 end
+
+bery0zas.functions.alter_recipe("filter-coal", "ingredients", "name", "coal", "amount", 2)

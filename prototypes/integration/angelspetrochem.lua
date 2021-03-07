@@ -8,6 +8,10 @@ if not bery0zas.pure_it.triggers["leave-halite"] then
 	bery0zas.functions.remove_item("bery0zas-halite")
 end
 
+bery0zas.functions.alter_recipe("bery0zas-spray-surface-recycling", "energy_required", nil, nil, nil, 5)
+bery0zas.functions.alter_recipe("bery0zas-spray-surface-recycling", "ingredients", "name", "bery0zas-polluted-spray-surface", "amount", 3)
+bery0zas.functions.alter_recipe("bery0zas-spray-surface-recycling", "results", "name", "bery0zas-spray-surface", "amount", 3)
+
 bery0zas.functions.alter_recipe("bery0zas-water-absorption", "results", "name", "bery0zas-polluted-water", "name", "water-mineralized")
 bery0zas.functions.alter_recipe("bery0zas-water-absorption-with-spraying", "results", "name", "bery0zas-polluted-water", "name", "water-mineralized")
 bery0zas.functions.alter_recipe("bery0zas-oxygen-sparged-water-absorption", "ingredients", "name", "bery0zas-oxygen-sparged-water", "name", "bery0zas-oxygen-solution")
@@ -15,9 +19,26 @@ bery0zas.functions.alter_recipe("bery0zas-oxygen-sparged-water-absorption", "res
 bery0zas.functions.alter_recipe("bery0zas-oxygen-sparged-water-absorption-with-spraying", "ingredients", "name", "bery0zas-oxygen-sparged-water", "name", "bery0zas-oxygen-solution")
 bery0zas.functions.alter_recipe("bery0zas-oxygen-sparged-water-absorption-with-spraying", "results", "name", "bery0zas-polluted-water", "name", "water-mineralized")
 bery0zas.functions.alter_recipe("bery0zas-sodium-hydroxide-sparged-water-absorption", "ingredients", "name", "bery0zas-sodium-hydroxide-sparged-water", "name", "liquid-aqueous-sodium-hydroxide")
+bery0zas.functions.alter_recipe("bery0zas-sodium-hydroxide-sparged-water-absorption", "ingredients", "name", "bery0zas-polluted-air", "amount", 6)
+bery0zas.functions.alter_recipe("bery0zas-sodium-hydroxide-sparged-water-absorption", "ingredients", "name", "liquid-aqueous-sodium-hydroxide", "amount", 12)
 bery0zas.functions.alter_recipe("bery0zas-sodium-hydroxide-sparged-water-absorption", "results", "name", "bery0zas-polluted-water", "name", "water-mineralized")
 bery0zas.functions.alter_recipe("bery0zas-sodium-hydroxide-sparged-water-absorption-with-spraying", "ingredients", "name", "bery0zas-sodium-hydroxide-sparged-water", "name", "liquid-aqueous-sodium-hydroxide")
 bery0zas.functions.alter_recipe("bery0zas-sodium-hydroxide-sparged-water-absorption-with-spraying", "results", "name", "bery0zas-polluted-water", "name", "water-mineralized")
+
+bery0zas.functions.alter_recipe("bery0zas-adsorption-coil-mk1-with-activated-carbon", "energy_required", nil, nil, nil, 1)
+bery0zas.functions.alter_recipe("bery0zas-adsorption-coil-mk1-with-activated-carbon", "ingredients", "name", "bery0zas-adsorption-coil-mk1", "amount", 3)
+bery0zas.functions.alter_recipe("bery0zas-adsorption-coil-mk1-with-activated-carbon", "results", "name", "bery0zas-adsorption-coil-mk1-with-activated-carbon", "amount", 3)
+bery0zas.functions.alter_recipe("bery0zas-adsorption-coil-mk2-with-cellular-carbon", "energy_required", nil, nil, nil, 1)
+bery0zas.functions.alter_recipe("bery0zas-adsorption-coil-mk2-with-cellular-carbon", "ingredients", "name", "bery0zas-adsorption-coil-mk2", "amount", 3)
+bery0zas.functions.alter_recipe("bery0zas-adsorption-coil-mk2-with-cellular-carbon", "results", "name", "bery0zas-adsorption-coil-mk2-with-cellular-carbon", "amount", 3)
+data.raw["assembling-machine"]["bery0zas-air-adsorber-1"].energy_usage = "100kW"
+
+bery0zas.functions.alter_recipe("bery0zas-coal-adsorption", "energy_required", nil, nil, nil, 30)
+bery0zas.functions.alter_recipe("bery0zas-coal-adsorption", "ingredients", "name", "bery0zas-polluted-air", "amount", 2)
+bery0zas.functions.alter_recipe("bery0zas-coal-adsorption-with-steam", "ingredients", "name", "coal", "amount", 1)
+bery0zas.functions.alter_recipe("bery0zas-coal-adsorption-with-steam", "energy_required", nil, nil, nil, 30)
+bery0zas.functions.alter_recipe("bery0zas-activated-carbon-adsorption", "energy_required", nil, nil, nil, 30)
+bery0zas.functions.alter_recipe("bery0zas-cellular-carbon-adsorption", "energy_required", nil, nil, nil, 30)
 
 bery0zas.functions.remove_technology_recipe("bery0zas-air-purification-1", "bery0zas-polluted-water-recycling")
 bery0zas.functions.remove_technology_recipe("bery0zas-air-purification-2", "bery0zas-oxygen-extraction")
@@ -109,20 +130,20 @@ data:extend({
 	{
 		type = "recipe",
 		name = "bery0zas-coal-filter-adsorption",
-		energy_required = 20,
+		energy_required = 30,
 		category = "bery0zas-air-filtering-adsorption",
 		enabled = false,
 		ingredients =
 		{
-			{ type = "item", name = "filter-coal", amount = 1 },
-			{ type = "fluid", name = "bery0zas-polluted-air", amount = 3, fluidbox_index = 2 }
+			{ type = "item", name = "filter-coal", amount = 3 },
+			{ type = "fluid", name = "bery0zas-polluted-air", amount = 4, fluidbox_index = 2 }
 		},
 		icon = "__angelsrefining__/graphics/icons/filter-coal.png",
 		icon_size = 32,
 		subgroup = "terrain",
 		results =
 		{
-			{ type = "item", name = "filter-frame", amount = 1 }
+			{ type = "item", name = "filter-frame", amount = 3 }
 		},
 		main_product = ""
 	}
@@ -157,3 +178,11 @@ bery0zas.functions.add_technology_recipe("bery0zas-air-purification-3", "bery0za
 if bery0zas.pure_it.triggers["leave-halite"] then
 	bery0zas.functions.add_technology_recipe("bery0zas-air-purification-3", "bery0zas-solid-sodium-hydroxide")
 end
+
+--CRAFTING_CATEGORIES
+table.insert(data.raw["assembling-machine"]["angels-chemical-plant"].crafting_categories, "bery0zas-air-filtering-chemistry")
+table.insert(data.raw["assembling-machine"]["angels-chemical-plant-2"].crafting_categories, "bery0zas-air-filtering-chemistry")
+table.insert(data.raw["assembling-machine"]["angels-chemical-plant-3"].crafting_categories, "bery0zas-air-filtering-chemistry")
+table.insert(data.raw["assembling-machine"]["angels-chemical-plant-4"].crafting_categories, "bery0zas-air-filtering-chemistry")
+table.insert(data.raw["assembling-machine"]["advanced-chemical-plant"].crafting_categories, "bery0zas-air-filtering-chemistry")
+table.insert(data.raw["assembling-machine"]["advanced-chemical-plant-2"].crafting_categories, "bery0zas-air-filtering-chemistry")
