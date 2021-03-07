@@ -20,5 +20,6 @@ Date: 6.03.2021
     - Rebalanced vanilla recipes for adsorption
     - Rebalanced vanilla recipes for intermediate products
     - Rebalanced recipes for integrated state
+    - Angel's air filter doesn't remove pollution
   Locale:
     - Various fixes in localization files
