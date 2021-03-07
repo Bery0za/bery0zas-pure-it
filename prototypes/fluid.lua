@@ -53,7 +53,7 @@ data:extend({
 		max_temperature = 100,
 		base_color = { r = 0.62, g = 0.7, b = 0.95 },
 		flow_color = { r = 0.62, g = 0.7, b = 0.95 },
-		icon = "__bery0zas-pure-it__/graphics/icons/fluid/oxygen-sparged-water.png",
+		icons = {{ icon = "__bery0zas-pure-it__/graphics/icons/fluid/oxygen-sparged-water.png" }},
 		icon_size = 32,
 		auto_barrel = false
 	},

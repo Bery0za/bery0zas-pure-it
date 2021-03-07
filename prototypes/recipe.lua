@@ -116,7 +116,7 @@ data:extend({
 		energy_required = 7,
 		category = "bery0zas-air-filtering-burning",
 		enabled = false,
-		ingredients = {{ "bery0zas-polluted-spray-surface", 1 }},
+		ingredients = {{ name = "bery0zas-polluted-spray-surface", amount = 1 }},
 		icon = "__bery0zas-pure-it__/graphics/icons/recipe/polluted-spray-surface-recycling.png",
 		icon_size = 32,
 		subgroup = "smelting-machine",
