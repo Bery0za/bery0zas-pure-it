@@ -1,4 +1,4 @@
-local INTERVAL = 20
+local INTERVAL = 60
 
 local POLLUTION_INTERVAL = 60
 local POLLUTION_AMOUNT = 1
@@ -10,6 +10,8 @@ local POLLUTE_FROM_BOXES_ENABLED = true
 local COLLECTED_POLLUTION_AMOUNT = 50
 
 local air_sucked_chunks = {}
+local chunk_update_schedule = {}
+local fluid_boxes_update_schedule = {}
 
 function starts_with(str, start)
 	return str:sub(1, #start) == start
@@ -168,12 +170,13 @@ function FilteredChunk:get_suckers()
 	return suckers
 end
 
-function FilteredChunk:get_total_absorption_rate()
+function FilteredChunk:get_total_absorption_rate(suckers)
 	local total_absorption_rate = 0.0
 	
-	for _, sucker in pairs(self:get_suckers()) do
+	for _, sucker in pairs(suckers) do
 		local absorption_rate = get_absorption_rate(sucker.entity) * sucker.fraction
 		total_absorption_rate = total_absorption_rate + absorption_rate
+		sucker.absorption_rate = absorption_rate
 	end
 	
 	return total_absorption_rate
@@ -191,8 +194,9 @@ function FilteredChunk:absorb()
 	if self:get_pollution() == 0 then
 		return
 	end
-	
-	local total_absorption_rate = self:get_total_absorption_rate()
+
+	local suckers = self:get_suckers()
+	local total_absorption_rate = self:get_total_absorption_rate(suckers)
 
 	if total_absorption_rate == 0 then
 		return
@@ -201,13 +205,8 @@ function FilteredChunk:absorb()
 	local toAbsorb = math.min(self:get_pollution(), total_absorption_rate)
 	local total_inserted_amount = 0.0
 	
-	for _, sucker in pairs(self:get_suckers()) do
-		--game.print("rate: " .. get_absorption_rate(sucker.entity))
-		--game.print("fraction: " .. sucker.fraction)
-		--game.print("total_rate: " .. total_absorption_rate)
-		--game.print("total: " .. toAbsorb)
-	
-		local toInsert = (get_absorption_rate(sucker.entity) * sucker.fraction / total_absorption_rate) * toAbsorb
+	for _, sucker in pairs(suckers) do
+		local toInsert = (sucker.absorption_rate * sucker.fraction / total_absorption_rate) * toAbsorb
 		
 		if toInsert > 0 then
 			local inserted_amount = sucker.entity.insert_fluid({ name = "bery0zas-pollution", amount = toInsert })
@@ -299,7 +298,7 @@ function on_entity_removed(event)
 	pollution = pollution + event.entity.get_fluid_count("bery0zas-polluted-air")
 	pollution = pollution + event.entity.get_fluid_count("bery0zas-polluted-water") * 0.5
 
-	if pollution > 0 then		
+	if pollution > 0 then	
 		event.entity.surface.pollute(event.entity.position, pollution)
 		game.pollution_statistics.on_flow(event.entity.name, pollution)
 	end
@@ -332,51 +331,66 @@ function pre_entity_removed(event)
 	end
 end
 
-function pollute_from(entity, fluidName, fluidAmount, pollutionAmount)
-	local pollution = entity.get_fluid_count(fluidName)
+function pollute_from(entity, fluid_name, fluid_amount, pollution_amount)
+	local pollution = entity.get_fluid_count(fluid_name)
+	local overload = pollution / (fluid_amount * COLLECTED_POLLUTION_AMOUNT)
 	
-	if pollution > fluidAmount * COLLECTED_POLLUTION_AMOUNT then
-		entity.remove_fluid{ name = fluidName, amount = fluidAmount }
-		entity.surface.pollute(entity.position, pollutionAmount)
-		game.pollution_statistics.on_flow(entity.name, pollutionAmount)
-	end
-end
-
-function pollute_from_boxes()
-	if (POLLUTE_FROM_BOXES_ENABLED) then
-		for _, entity in pairs(global.entities_with_fluidboxes) do		
-			if entity.valid then
-				pollute_from(entity, "bery0zas-polluted-air", POLLUTION_AMOUNT, POLLUTION_AMOUNT)
-				pollute_from(entity, "bery0zas-polluted-water", POLLUTED_WATER_AMOUNT, POLLUTION_AMOUNT)
-			end
-		end
+	if pollution > fluid_amount * COLLECTED_POLLUTION_AMOUNT then
+		local final_amount = fluid_amount * overload
+		entity.remove_fluid{ name = fluid_name, amount = final_amount }
+		entity.surface.pollute(entity.position, final_amount)
+		game.pollution_statistics.on_flow(entity.name, final_amount)
 	end
 end
 
 function absorb_pollution(event)
-	for _, c in pairs(air_sucked_chunks) do
+	--[[for _, c in pairs(air_sucked_chunks) do
 		c:absorb()
+	end]]
+	local i = game.tick % INTERVAL + 1
+
+	for _, c in pairs(chunk_update_schedule[i]) do
+		c:absorb()
+	end
+
+	--game.print("Total chunks: " .. #chunk_update_schedule[i])
+end
+
+function pollute_from_boxes()
+	if (POLLUTE_FROM_BOXES_ENABLED--[[ and game.tick % POLLUTION_INTERVAL == 0]]) then
+		--[[for _, entity in pairs(global.entities_with_fluidboxes) do
+			if entity.valid then
+				pollute_from(entity, "bery0zas-polluted-air", POLLUTION_AMOUNT, POLLUTION_AMOUNT)
+				pollute_from(entity, "bery0zas-polluted-water", POLLUTED_WATER_AMOUNT, POLLUTION_AMOUNT)
+			end
+		end]]
+
+		local i = game.tick % POLLUTION_INTERVAL + 1
+
+		for _, f in pairs(fluid_boxes_update_schedule[i]) do
+			if f.valid then
+				pollute_from(f, "bery0zas-polluted-air", POLLUTION_AMOUNT, POLLUTION_AMOUNT)
+				pollute_from(f, "bery0zas-polluted-water", POLLUTED_WATER_AMOUNT, POLLUTION_AMOUNT)
+			end
+		end
+
+		--game.print("Total fluid boxes: " .. #fluid_boxes_update_schedule[i])
 	end
 end
 
 function on_tick(event)
-	if (POLLUTE_FROM_BOXES_ENABLED and game.tick % POLLUTION_INTERVAL == 0) then	  
-		pollute_from_boxes()
-	end
-	
-	if game.tick % INTERVAL == 0 then	  
-		absorb_pollution(event)
-	end
+	absorb_pollution()
+	pollute_from_boxes()
 end
 
 function find_entities_with_fluid_boxes()
 	for _, surface in pairs(game.surfaces) do
-		for _, entity in pairs(surface.find_entities()) do		
+		for _, entity in pairs(surface.find_entities()) do
 			if #entity.fluidbox > 0 then
 				global.entities_with_fluidboxes[entity.unit_number] = entity
 			end
 		end
-	end	
+	end
 end
 
 function init()
@@ -384,7 +398,7 @@ function init()
 	global.entities_with_fluidboxes = {}
 
 	for _, surface in pairs(game.surfaces) do
-		local suckers = surface.find_entities_filtered 
+		local suckers = surface.find_entities_filtered
 		{
 			name = { "bery0zas-air-suction-tower-1", "bery0zas-air-suction-tower-2", "bery0zas-air-suction-tower-3" }
 		}
@@ -407,6 +421,26 @@ function load()
 		end
 	end
 
+	for i = 1, INTERVAL do
+		chunk_update_schedule[i] = {}
+	end
+
+	for i = 1, POLLUTION_INTERVAL do
+		fluid_boxes_update_schedule[i] = {}
+	end
+
+	local k = 1
+	for _, c in pairs(air_sucked_chunks) do
+		table.insert(chunk_update_schedule[k], c)
+		k = (k + 1) % INTERVAL + 1
+	end
+
+	k = 1
+	for _, f in pairs(global.entities_with_fluidboxes) do
+		table.insert(fluid_boxes_update_schedule[k], f)
+		k = (k + 1) % POLLUTION_INTERVAL + 1
+	end
+
 	POLLUTE_FROM_BOXES_ENABLED = settings.startup["bery0zas-pure-it-pollutefromboxes"].value
 	COLLECTED_POLLUTION_AMOUNT = settings.startup["bery0zas-pure-it-amountofcollectedpollution"].value
 end
@@ -414,8 +448,7 @@ end
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, on_entity_created)
 script.on_event({defines.events.on_pre_player_mined_item, defines.events.on_pre_robot_mined_item, defines.events.on_entity_died}, pre_entity_removed)
 script.on_event({defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity, defines.events.on_entity_died}, on_entity_removed)
-script.on_nth_tick(POLLUTION_INTERVAL, pollute_from_boxes)
-script.on_nth_tick(INTERVAL, absorb_pollution)
+script.on_event({defines.events.on_tick}, on_tick)
 
 script.on_init(init)
 script.on_configuration_changed(init)
