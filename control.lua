@@ -84,12 +84,12 @@ function energy_crafting_modifier(entity)
 	end
 end
 
-function getSuctionRate(entity)
+function get_suction_rate(entity)
 	return get_base_suction_rate(entity) * energy_crafting_modifier(entity)
 end
 
 function get_absorption_rate(entity)
-	return math.min(get_space_for_pollution(entity), getSuctionRate(entity))
+	return math.min(get_space_for_pollution(entity), get_suction_rate(entity))
 end
 
 local FilteredChunk = {
@@ -115,7 +115,7 @@ function FilteredChunk:to_position()
 	return { x = self.x * 32, y = self.y * 32 }
 end
 
-function FilteredChunk:addToMap()
+function FilteredChunk:add_to_map()
 	local chunk_list_x = global.air_sucked_chunks_map[self.surface.name] or {}
 	local chunk_list_y = chunk_list_x[self.x] or {}
 	assert(chunk_list_y[y] == nil, "Chunklist entry should not exist yet.")
@@ -140,7 +140,7 @@ function FilteredChunk:add_sucker(sucker, fraction)
 	self.suckers[sucker.unit_number] = { entity = sucker, fraction = fraction }
 	
 	if entries_count(self.suckers) == 1 then
-		self:addToMap()
+		self:add_to_map()
 	end
 end
 
@@ -202,14 +202,14 @@ function FilteredChunk:absorb()
 		return
 	end
 
-	local toAbsorb = math.min(self:get_pollution(), total_absorption_rate)
+	local to_absorb = math.min(self:get_pollution(), total_absorption_rate)
 	local total_inserted_amount = 0.0
 	
 	for _, sucker in pairs(suckers) do
-		local toInsert = (sucker.absorption_rate * sucker.fraction / total_absorption_rate) * toAbsorb
+		local to_insert = (sucker.absorption_rate * sucker.fraction / total_absorption_rate) * to_absorb
 		
-		if toInsert > 0 then
-			local inserted_amount = sucker.entity.insert_fluid({ name = "bery0zas-pollution", amount = toInsert })
+		if to_insert > 0 then
+			local inserted_amount = sucker.entity.insert_fluid({ name = "bery0zas-pollution", amount = to_insert })
 			game.pollution_statistics.on_flow(sucker.entity.name, -inserted_amount)
 			total_inserted_amount = total_inserted_amount + inserted_amount
 		end
@@ -380,7 +380,7 @@ end
 
 function on_tick(event)
 	absorb_pollution()
-	pollute_from_boxes()
+	--pollute_from_boxes()
 end
 
 function find_entities_with_fluid_boxes()
