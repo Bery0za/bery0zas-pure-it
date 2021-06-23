@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 23.06.2021
+  Optimisations:
+    - Renewed entities update scheme, slightly better UPS
+  Locale:
+    - German localization (thanks Yokmp - https://github.com/Yokmp)
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0 (The whole new life update)
 Date: 7.03.2021
   Info:
